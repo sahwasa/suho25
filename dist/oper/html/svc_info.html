@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>수호25 운영자</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="../../plugins/axicon/axicon.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/style_oper.css" rel="stylesheet">
+    <link href="../../css/style_m.css" rel="stylesheet">
+    <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5core/dist/ax5core.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5ui-toast/dist/ax5toast.min.js"></script>
+  </head>
+  <body>
+<!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#nav">주메뉴 바로가기</a>
+</div>
+<hr class="access_divide" />
+<!-- 바로가기 메뉴__e -->
+<div class="wrap">
+  <div id="nav" class="aside">
+  <h1 class="tit_logo"><a href="" title="메인">SUHO25-TOP SAFETY</a></h1>
+  <div class="my_infoArea clearfix" myInfo>
+    <b>홍길동</b>
+    <span class="btn_wrap fr" myInfoLayer>
+      <button type="button" class="btn btn_s">내정보</button>
+      <button type="button" class="btn btn_s">로그아웃</button>
+    </span>
+    <div class="my_infoDtl">
+      <ul class="my_info">
+        <li class="info_id"><input type="text" placeholder="아이디(이메일)" /></li>
+        <li class="info_phone"><input type="text" placeholder="연락처" /></li>
+        <li class="info_name"><input type="text" placeholder="이름" /></li>
+        <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
+        <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
+      </ul>
+      <div class="btnArea">
+        <button type="button" class="btn btn_red">저장</button>
+        <button type="button" class="btn btn_gray">취소</button>
+      </div>
+    </div>
+  </div>
+  <div class="util m_view">
+    <button class="btn_navToggle" toggle_nav><span class="ico">메뉴</span></button>
+  </div>
+  <ul class="gnb" role="navigation">
+    <li><a href="/oper/html/monitoring.html" title="새창열림" target="_blank">모니터링 <i class="axi_only axi_newOpen">새창열림</i></a></li>
+    <li class="on"><a href="/oper/html/svc_info.html">서비스정보</a>
+      <ul class="sub">
+        <li class="on"><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/product_info.html">제품정보</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/svc_status.html">서비스 이용현황</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/assign_engineer.html">설치기사배정</a></li>
+  </ul>
+  <div class="footer">
+    ⓒ SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+  <div id="content" class="content">
+    <div class="content_tit">
+      <h1>서비스정보</h1>
+    </div>
+    <div class="content_body">
+      <div class="tbl_top clearfix">
+        <span class="fr">
+          <select name="" id="" title="구분" class="first">
+            <option value="">구분</option>
+            <option value="">완료</option>
+          </select>
+          <input type="text" placeholder="검색어" />
+          <button type="button" class="btn btn_blueline">검색</button>
+        </span>
+      </div>
+      <div class="tbl_wrap">
+        <table class="tbl_default tbl_idx">
+          <colgroup>
+            <col class="idx" />
+            <col span="6"/>
+            <col class="fix_scroll" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="row">No.</th>
+              <th scope="row">서비스명</th>
+              <th scope="row">서비스코드</th>
+              <th scope="row">서비스지역</th>
+              <th scope="row">시작일</th>
+              <th scope="row">종료일</th>
+              <th scope="row">구분</th>
+              <th class="fix_scroll"></th>
+            </tr>
+          </thead>
+        </table>
+        <div class="tbl_scroll">
+          <table class="tbl_default tbl_hover tbl_idx">
+            <colgroup>
+              <col class="idx" />
+              <col span="6"/>
+            </colgroup>
+            <tbody>
+              <tr class="on">
+                <td>1</td>
+                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td><label for="">서비스코드</label> ANP001</td>
+                <td><label for="">서비스지역</label> 제주</td>
+                <td><label for="">시작일</label> 2020-03-01</td>
+                <td><label for="">종료일</label> 2020-05-01</td>
+                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td><label for="">서비스코드</label> ANP001</td>
+                <td><label for="">서비스지역</label> 제주</td>
+                <td><label for="">시작일</label> 2020-03-01</td>
+                <td><label for="">종료일</label> 2020-05-01</td>
+                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td><label for="">서비스코드</label> ANP001</td>
+                <td><label for="">서비스지역</label> 제주</td>
+                <td><label for="">시작일</label> 2020-03-01</td>
+                <td><label for="">종료일</label> 2020-05-01</td>
+                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td><label for="">서비스코드</label> ANP001</td>
+                <td><label for="">서비스지역</label> 제주</td>
+                <td><label for="">시작일</label> 2020-03-01</td>
+                <td><label for="">종료일</label> 2020-05-01</td>
+                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="btn_top" title="맨위로">맨위로</a>
+</body>
+</html>
+<script src="/js/ui_common.js"></script>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>수호25 운영자</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="../../plugins/axicon/axicon.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/style_oper.css" rel="stylesheet">
+    <link href="../../css/style_m.css" rel="stylesheet">
+    <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5core/dist/ax5core.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5ui-toast/dist/ax5toast.min.js"></script>
+  </head>
+  <body>
+<!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#nav">주메뉴 바로가기</a>
+</div>
+<hr class="access_divide" />
+<!-- 바로가기 메뉴__e -->
+<div id="gis_wrap" class="monitoring">
+  <!-- aside -->
+  <div class="gisAside">
+    <button type="button" class="btn_toggle" role="toggle_gisAside" datavalue="on" title="닫기">좌측메뉴 컨트롤버튼</button>
+    <h1 class="tit_logo"><a href="">메인로고</a></h1>
+    <ul class="status">
+      <li><h2>Today total</h2><b>50</b>건</li>
+      <li><h2>정상처리</h2><b>50</b>건</li>
+      <li><h2>미처리</h2><b>50</b>건</li>
+    </ul>
+    <div class="ipt_search">
+      <input type="text" placeholder="검색어를 입력하세요">
+      <button type="button" class="axi_only axi_search">검색</button>
+    </div>
+    <div class="list_wrap">
+      <ul class="list_top list_status">
+        <li class="on"><a href="">전체<span>100</span></a></li>
+        <li><a href="">접수<span>30</span></a></li>
+        <li><a href="">처리중<span>20</span></a></li>
+        <li><a href="">완료<span>10</span></a></li>
+      </ul>
+      <div class="list_area">
+        <ul class="list_items">
+          <li class="on processing" tabindex="0">
+              <div class="item_date">
+                <sapn class="tag">처리중</sapn>
+                <span>2020.12.31 12:34:56</span>
+              </div>
+              <dl class="item_info">
+                <dt>주소</dt>
+                <dd>이천시 부평구 부개동</dd>
+                <dt>상호</dt>
+                <dd>길동 천국 1호점</dd>
+                <dt>이름</dt>
+                <dd>홍길동 010-1234-5678</dd>
+                <dt>녹취</dt>
+                <dd>
+                  <div class="progress"></div><button type="button" class="btn_refresh">새로고침</button>
+                </dd>
+              </dl>
+              <button type="button" class="btn_statement" disabled>처리중</button>
+          </li>
+          <li tabindex="0" class="receipt">
+            <div class="item_date">
+              <sapn class="tag">접수</sapn>
+              <span>2020.12.31 12:34:56</span>
+            </div>
+            <dl class="item_info">
+              <dt>주소</dt>
+              <dd>이천시 부평구 부개동</dd>
+              <dt>상호</dt>
+              <dd>길동 천국 1호점</dd>
+              <dt>이름</dt>
+              <dd>홍길동 010-1234-5678</dd>
+              <dt>녹취</dt>
+              <dd>
+                <div class="audio_wrap">
+                  <audio controls controlsList="nodownload">
+                    <source src="https://cdn.bitdegree.org/learn/I_Cactus_-_05_-_ruby_cactus.mp3" type="audio/mpeg" />
+                    Audio tag is unsupported in this browser
+                  </audio>
+                </div>
+            </dl>
+            <button type="button" class="btn_statement">처리입력</button>
+          </li>
+          <li tabindex="0" class="completion">
+            <div class="item_date">
+              <sapn class="tag">완료</sapn>
+              <span>2020.12.31 12:34:56</span>
+            </div>
+            <dl class="item_info">
+              <dt>주소</dt>
+              <dd>이천시 부평구 부개동</dd>
+              <dt>상호</dt>
+              <dd>길동 천국 1호점</dd>
+              <dt>이름</dt>
+              <dd>홍길동 010-1234-5678</dd>
+              <dt>녹취</dt>
+              <dd>
+                <div class="audio_wrap">
+                  <audio controls controlsList="nodownload">
+                    <source src="https://cdn.bitdegree.org/learn/I_Cactus_-_05_-_ruby_cactus.mp3" type="audio/mpeg" />
+                    Audio tag is unsupported in this browser
+                  </audio>
+                </div>
+              </dd>
+            </dl>
+            <button type="button" class="btn_statement">처리결과</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- aside__e -->
+
+  <div class="gisArea" streetView="on">
+    <!-- 맵영역 -->
+    <div class="mapArea">
+      맵영역 
+    </div>
+    <!-- 맵영역__e -->
+    <!-- 거리뷰영역 -->
+    <div class="streetArea">
+      거리뷰영역
+    </div>
+    <!-- 거리뷰영역__e -->
+
+    <!-- 지역팝업 -->
+    <!-- 드래그기능 빼달라하셔서 뺐어요, 넣으실거면 아래 결과입력팝업처럼
+     .pop_wrap ( dataformat='modal') 속성 추가해주세요  -->
+    <div class="pop_areaDtl pop_wrap">
+      <div class="pop_tit">
+        <h1>길동 천국 1호점길동 천국 1호점길동 천국 1호점길동 천국 1호점</h1>
+        <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
+      </div>
+      <div class="body">
+        <div class="thumb">
+          <img src="http://placehold.it/276x160" width="276px" height="160px" alt="">
+        </div>
+        <div class="area_date">
+          2020.12.31 12:34:56
+          <span class="fr">
+            <button type="button" class="btn_areaDtl">상세보기</button>
+          </span>
+        </div>
+        <div class="area_info">
+          <p class="address">인천광역시 부평구 부흥북로 107번길 39</p>
+          <span class="name">홍길동</span><b class="phone">010-1234-5678</b>
+        </div>
+      </div>
+    </div>
+    <!-- 지역팝업__e -->
+
+    <!-- 결과입력팝업 -->
+    <div class="pop_iptResult pop_wrap" dataformat="modal">
+      <div class="pop_tit">
+        <h1 class="blind">처리입력</h1>
+        <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
+      </div>
+      <div class="pop_body">
+        <dl>
+          <dt><label for="">결과</label></dt>
+          <dd><select name="" id=""><option value=""></option></select></dd>
+          <dt><label for="">내용</label></dt>
+          <dd>
+            <textarea name="" id="" cols="5" rows="3"></textarea>
+          </dd>
+        </dl>
+        <div class="btn_area">
+          <button class="btn btn_whiteline" role="btn_close">취소</button>
+          <button class="btn btn_red">저장</button>
+        </div>
+      </div>
+    </div>
+    <!-- 결과입력팝업__e -->
+
+  <button id="toast" type="button" class="btn btn_white" style="position:absolute;left:0;top:0; z-index:1000;">토스트</button>
+  <button id="street" type="button" class="btn btn_white" style="position:absolute;left:100px;top:0; z-index:1000;">거리뷰 온오프</button>
+</div>
+<a href="#" class="btn_top" title="맨위로">맨위로</a>
+</body>
+</html>
+<script src="/js/ui_common.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+  // 토스트메뉴
+  var toast = new ax5.ui.toast();
+  toast.setConfig({
+    theme: "danger",
+    containerPosition: "top-left",
+    icon: '<i class="axi axi-exclamation-triangle"></i>',
+    "lang":{
+        "ok":'<i class="axi_only axi_cirClose" title="닫기"></i>'
+    }
+  });
+ 
+  $('#toast').click(function () {
+    toast.confirm({
+      msg: '서비스가 접수되었습니다.',
+      onStateChanged: function () {
+          console.log(this);
+      }
+    }, function () {
+      // close toast
+      console.log(this);
+    });
+  });
+
+  // 토글 aside
+  var aside = $('.gisAside'),
+      asideW = aside.outerWidth();
+  $('[role="toggle_gisAside"]').on('click',function(){
+    var cur = $(this).attr('datavalue');
+    if(cur === 'on'){
+      aside.animate({left: -asideW});
+      $(this).attr('datavalue', 'off').attr('title','열기');
+    }
+    else{
+      aside.animate({left: 0});
+      $(this).attr('datavalue', 'on').attr('title','닫기');
+    }
+  })
+
+  // 거리뷰
+  // .gisArea의 streetView 속성의 값 on / off 로 컨트롤
+  var gisArea = $('.gisArea');  
+  $('#street').on('click',function(){
+    var cur = gisArea.attr('streetView');
+    (cur === 'on') ? gisArea.attr('streetView', 'off') : gisArea.attr('streetView', 'on');
+  });
+})
+var AudioContext = window.AudioContext ||
+  window.webkitAudioContext ||
+  false;
+
+</script>

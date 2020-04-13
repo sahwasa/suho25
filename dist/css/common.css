@@ -142,7 +142,7 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .dot_list dt::before{position:absolute;left:3px;top:50%;margin-top:-1px;content:"";width:3px;height:3px;border-radius:50%;background-color:#f0ad4e;}
 
 /* btn */
-.btn{border-width:1px;border-style:solid;color:#fff;text-align:center;text-indent:0;line-height:21px;padding:2px 11px 4px;font-family:'notokrR';vertical-align:middle;border-radius:0;}
+.btn{border-width:1px;border-style:solid;background-color:transparent; color:#fff;text-align:center;text-indent:0;line-height:21px;padding:2px 11px 4px;font-family:'notokrR';vertical-align:middle;border-radius:0;}
 .btn:hover{color:#fff;}
 .btn_s{padding:0 4px 1px;border-radius:2px;font-size:0.875em;border-width:1px;font-family:'notokrL';}
 .btn_line{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.5);}
@@ -150,11 +150,11 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .btn_whiteline{color:#999;border-color:#d7d7d7;}
 .btn_whiteline:hover,
 .btn_white:hover{color:#333;}
-.btn_red{border-color:#f14a4a;background-color:#f14a4a;}
-.btn_green{border-color:#519488;background-color:#61ac9f;}
-.btn_blue{background-color:#4a77dc;border-color:#4a77dc;}
+.btn_red{background-color:#f14a4a;}
+.btn_green{background-color:#61ac9f;}
+.btn_blue{background-color:#4a77dc;}
 .btn_pink{background-color:#e38895;}
-.btn_grayblue{background-color:#6090b6;border-color:#476a85; }
+.btn_grayblue{background-color:#6090b6; }
 .btn_deepblueline{color:#6f778b;border-color:#6f778b;}
 .btn_deepblueline:hover{color:#fff;background-color:#6f778b;}
 .btn_blueline{color:#4a77dc;border-color:#4a77dc;}
@@ -198,7 +198,7 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 
 .file_text{float:left;width:380px;height:19px;}
 .file_wrap{display:inline-block;position:relative;width:60px;height:24px;margin-left:5px;cursor:pointer;line-height:22px;}
-.file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;}
+/* .file_add{filter:alpha(opacity:0);opacity:0;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:24px;padding:0;border:0;cursor:pointer;} */
 
 .overlay{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:400;display:none;}
 
@@ -404,18 +404,19 @@ table .btn{border-width:1px;}
 .tit_logo{width:100%;height:102px;padding:25px 0;background-color:#02204a;box-sizing:border-box;}
 .tit_logo a{width:100%;height:100%;font-size:0;text-align:center;background:url(../img/logo_w.png) 50% 0 no-repeat;vertical-align:top;background-size:contain;}
 .my_infoArea{color:#fff;padding:10px 25px;box-sizing:border-box;background-color:#000;}
-.my_infoArea .btn{border-color:#666;color:#ccc;vertical-align: baseline;}
-.my_infoArea .btn:hover{color:#fff;}
+.my_infoArea .btn_wrap > .btn{border-color:#666;color:#ccc;vertical-align: baseline;}
+.my_infoArea .btn_wrap > .btn:hover{color:#fff;}
 .my_info{box-sizing:border-box;}
 .my_info li{position:relative;margin:5px 0;padding:0 5px 0 35px;box-sizing:border-box;text-align:left;}
-.my_info li::before{position:absolute;left:5px;top:5px;font-family:'axicon';color:#fff;margin-right:5px;}
+.my_info li::before{position:absolute;left:5px;top:50%;font-family:'axicon';color:#fff;margin-right:5px;transform:translateY(-50%);}
 .my_info .info_id::before{content:"\e002";}
 .my_info .info_pw::before{content:"\e789";}
 .my_info .info_name::before{content:"\e691";}
 .my_info .info_phone::before{content:"\e860";}
 .my_info li input{width:100%;border-radius:3px;}
-.my_infoDtl{background:rgba(255,255,255,.2);padding:10px 5px;margin-top:10px;box-shadow:0 0 5px rgba(0,0,0,.4) inset;border-radius:3px;}
+.my_infoDtl{display:none;background:rgba(255,255,255,.2);padding:10px 5px;margin-top:10px;box-shadow:0 0 5px rgba(0,0,0,.4) inset;border-radius:3px;}
 .my_infoDtl .btnArea{text-align:center;margin-top:10px;}
+.my_infoDtl.open{display:block;}
 
 .gnb{margin-top:25px;}
 .gnb a{width:100%;color:#fff;font-family:'notokrL';}

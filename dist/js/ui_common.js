@@ -35,13 +35,23 @@
     header.toggleClass(full_lnb);
     (header.hasClass(full_lnb))?$('body').css("overflow","hidden"):$('body').css("overflow","visible")
   })
+  var myIpt = $('[myInfoIpt]'),
+      myInfoLayer = $('[myInfoLayer]');
   $('[myInfo]').on({
     'mouseenter' : function(){
-      $('[myInfoLayer]').addClass('open');
+      if($('.my_infoDtl').hasClass('open')) return
+      myInfoLayer.addClass('open');
     },
     'mouseleave' : function(){
-      $('[myInfoLayer]').removeClass('open');
+      myInfoLayer.removeClass('open');
     }
+  })
+  myIpt.on('click',function(){
+    myInfoLayer.removeClass('open');
+    $('.my_infoDtl').toggleClass('open');
+  })
+  $('[myIptClose]').on('click',function(){
+    $('.my_infoDtl').removeClass('open');
   })
 
 	/* layer_popup */

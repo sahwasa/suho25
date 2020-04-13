@@ -1,0 +1,122 @@
+/* monitoring */
+.monitoring{position:relative;width:100%;height:100%;padding:0;}
+.ax5-ui-toast-container.top-left{left:50%;margin-left:-160px;}
+.ax5-ui-toast-container [data-ax-toast-btn="ok"]{padding:0;background-color:transparent!important;border:none!important;box-shadow: none!important;}
+.ax5-ui-toast-container .axi_cirClose::before{font-size:15px;color:#d9534f;}
+.gisAside{position:absolute;left:0;top:0;width:278px;height:100%;border-right:1px solid #b7b7b7;background-color:#fff;z-index:100;}
+.gisAside .btn_toggle{position:absolute;right:-20px;top:50%;margin-top:-25px;width:20px;height:50px;font-size:0;background-color:#fff;border:1px solid #b7b7b7;border-left-width:0;border-radius:0 3px 3px 0;}
+.gisAside .btn_toggle::before{content:"\f0da";font-family:'axicon';color:#666;font-size:14px;}
+.gisAside .btn_toggle[datavalue="on"]::before{content:"\f0d9";}
+.gisAside .tit_logo{display:block;width:100%;height:80px;background-color:#073973;margin:0;padding:12px 0 16px;}
+.gisAside .tit_logo a{background-size: initial;}
+.gisAside .ipt_search{position:relative;background-color:#d9e1ef;padding:16px 14px;}
+.gisAside .ipt_search input{width:100%;height:33px;border-radius:3px;font-size:13px;line-height:33px;}
+.gisAside .ipt_search .axi_search{position:absolute;right:25px;top:50%;margin-top:-15px;}
+.gisAside .ipt_search .axi_search::before{font-size:18px;color:#999;vertical-align:top;}
+.gisAside .list_wrap{height:calc(100% - 210px);}
+.gisAside .list_status{display:flex;flex-direction:row;width:100%;border-bottom: 1px solid #4b77dc;}
+.gisAside .list_status li{flex:1;line-height:44px;}
+.gisAside .list_status a{width:100%;font-size:12px;color:#777;line-height:10px;border-left:1px solid #4b77dc;}
+.gisAside .list_status li:first-child a{border-left:none;}
+.gisAside .list_status .on a{color:#4b77dc;font-family:'notokrM';}
+.gisAside .list_status span::before{content:"(";}
+.gisAside .list_status span::after{content:")";}
+.gisAside .list_area{height:calc(100% - 45px);overflow-y:auto;}
+.gisAside .list_items li{border-bottom:1px solid #e2e2e2;text-align:left;padding:15px;cursor:pointer;}
+.gisAside .list_items li:hover{background-color:#f3f5f9;}
+.gisAside .list_items li.on{background-color:#fcf8e3;border-color:#faebcc;}
+.gisAside .list_items li.on dt{color:#433318;}
+.gisAside .list_items li.on dd{color:#8a6d3b;}
+.gisAside .item_date{font-size:14px;color:#000;}
+.gisAside .item_date .tag{position:relative;top:-1px;display:inline-block;width:46px;height:16px;color:#fff;font-size:11px;border-radius:2px;font-family:'notokrL';text-align:center;margin-right:5px;line-height:16px;}
+.processing .tag{background-color:#3b9413;}
+.receipt .tag{background-color:#df8b46;}
+.completion .tag{background-color:#119fce;}
+.gisAside .item_info{display:flex;flex-wrap:wrap;}
+.gisAside .item_info dt,
+.gisAside .item_info dd{position:relative;font-size:13px;margin-top:4px;}
+.gisAside .item_info dt{width:38px;color:#333;padding-left:1px;}
+.gisAside .item_info dt::after{content:":";margin-left:5px;}
+.gisAside .item_info dd{width:calc(100% - 38px);color:#777;}
+.gisAside .item_info input[type="text"],
+.gisAside .item_info select,
+.gisAside .item_info .progress,
+.gisAside .audio_wrap audio,
+.gisAside .audio_wrap{display:inline-block;width:calc(100% - 55px);height:24px;color:#777;padding:0;vertical-align:middle;box-sizing:border-box;}
+.progress{position:relative;border:2px solid #d9e1ef;background-color:#fff;text-align:center;}
+.progress::before,
+.progress::after{position:absolute;width:0;height:16px;}
+.progress::before{left:2px;top:2px;display:block;border-radius:2px;background-color:#7596e2;content:"";animation: gage 2s ease infinite;}
+@keyframes gage{0%{width:0;}100%{width:calc(100% - 4px);}}
+.progress::after{left:0;top:0;width:100%;content:"다운로드중...";color:#fff;}
+.gisAside .audio_wrap{position:relative;width:100%;overflow:hidden;direction:ltl;border-radius:3px;}
+.gisAside .audio_wrap audio{width:250px;width:260px\0;padding:0;}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display{font-size:11px;}
+.gisAside li:hover audio::-webkit-media-controls-panel{background-color:#dcdee3;}
+audio::-webkit-media-controls-panel,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-current-time-display, 
+audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
+.gisAside .btn_refresh,
+.gisAside .btn_statement{font-size:11px;line-height:22px;box-sizing:border-box;}
+.gisAside .btn_refresh{float:right;width:50px;background-color:#fff;border:1px solid #d2d9e4;color:#4a77dc;}
+.gisAside .btn_statement{display:block;width:100%;font-size:13px;background-color:#3b5998;color:#fff;margin-top:10px;box-shadow:0 1px 1px rgba(0,0,0,.4);border-radius:3px;letter-spacing:0;}
+.gisAside .btn_statement:hover{box-shadow:2px 2px 3px rgba(0,0,0,.4) inset;}
+.gisAside .processing .btn_statement{background-color:#f14a4a;}
+.gisAside .receipt .btn_statement{background-color:#3b5998;}
+.gisAside .completion .btn_statement{background-color:#797979;}
+.monitoring .gisArea{position:relative;height:100%;background:#ccc;overflow: hidden;}
+.monitoring .gisArea .mapArea,
+.monitoring .gisArea .streetArea{width:100%;transition:height .5s;box-sizing:border-box;}
+[streetView="on"] .mapArea{height:60%;}
+[streetView="on"] .streetArea{height:40%;border-top: 1px solid #999;}
+[streetView="off"] .mapArea{height:100%;}
+[streetView="off"] .streetArea{height:0;}
+
+.pop_areaDtl{position:absolute;left:50%;top:200px;width:310px;text-align:left;background-color:#fff;border:1px solid #b7b7b7;}
+.pop_areaDtl .pop_tit{position:relative;border-bottom: 1px solid #ccc;}
+.pop_areaDtl .pop_tit h1{display:block;color:#4a77dc;padding:15px 45px 15px 15px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.pop_areaDtl .pop_tit .axi_del{position:absolute;right:12px;top:50%;height:24px;margin-top:-12px;}
+.pop_areaDtl .pop_tit .axi_del::before{font-size:24px;line-height:0; vertical-align:top;}
+.pop_areaDtl .body{padding:15px;border-top-width:0;}
+.pop_areaDtl .thumb{border:1px solid #d7d7d7;overflow:hidden;margin-bottom:10px;}
+.pop_areaDtl .area_date{font-size:14px;color:#000;overflow:hidden;}
+.btn_areaDtl{font-size:12px;color:#4a77dc;}
+.btn_areaDtl::after{position:relative;top:-6px;content:"\f18e";font-family:'axicon';font-size:20px;vertical-align:top;margin-left:5px;}
+.pop_areaDtl .address,
+.area_info .name,
+.area_info .phone{font-size:13px;color:#555;word-break:break-all;}
+.area_info .name{color:#999;margin-right:10px;}
+.area_info .phone{color:#4a77dc;}
+.pop_iptResult{position:absolute;left:300px;top:50%;width:210px;border:1px solid #b7b7b7;background-color:#fff;z-index:110;text-align:left;}
+.pop_iptResult .pop_tit{text-align:right;padding:5px 10px 0;}
+.pop_iptResult .axi_del::before{font-size:20px;}
+.pop_iptResult .pop_body{padding:0 15px 10px;margin-top:-5px;}
+.pop_iptResult dt,
+.pop_iptResult dd{display:block;font-size:13px;color:#555;}
+.pop_iptResult dd{margin-bottom:5px;}
+.pop_iptResult dd select,
+.pop_iptResult dd textarea{width:100%;}
+.pop_iptResult dd textarea{height:75px;}
+.pop_iptResult .btn_area{text-align:center;}
+
+/* my_svc */
+.svc_subscription{display:flex;}
+.status{display:flex;width:100%;}
+.status li{flex:1;height:60px;box-sizing:border-box;}
+.status li:nth-child(1){background-color:#4a77dc;}
+.status li:nth-child(2){background-color:#7596e2;}
+.status li:nth-child(3){background-color:#f87c5b;}
+.status li,
+.status h2{color:#fff;font-size:12px;}
+.status h2{display:block;width:100%;margin-top:8px;}
+.status b{font-size:22px;margin-right:3px;}
+
+.m_view{display:none;}
+
+/* ios css핵 */
+@supports (-webkit-overflow-scrolling: touch) {
+  .gisAside .audio_wrap{height:31px;}
+  .gisAside .audio_wrap audio{width:230px;}
+}

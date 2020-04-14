@@ -39,10 +39,13 @@
       myInfoLayer = $('[myInfoLayer]');
   $('[myInfo]').on({
     'mouseenter' : function(){
-      if($('.my_infoDtl').hasClass('open')) return
+      if($('.my_infoDtl').hasClass('open')) return;
       myInfoLayer.addClass('open');
     },
     'mouseleave' : function(){
+      myInfoLayer.removeClass('open');
+    },
+    'focusout' : function(){
       myInfoLayer.removeClass('open');
     }
   })
@@ -51,6 +54,7 @@
     $('.my_infoDtl').toggleClass('open');
   })
   $('[myIptClose]').on('click',function(){
+    myInfoLayer.removeClass('open');
     $('.my_infoDtl').removeClass('open');
   })
 
@@ -144,17 +148,8 @@
   //   oneLine: true
   // });
 
-	// jqgridInit();
 })(jQuery);
 
-// function jqgridInit(){
-// 	$('.jq-grid').each(function(){
-// 		$(this).setGridWidth($(this).parents('.article_body').width() - 2);
-// 	});
-// }
-// $(window).on('resize', function() {
-// 	jqgridInit();
-// });
 
 
 // slectlist evt
@@ -232,4 +227,10 @@
 		}else{
 				$(this).attr('datavalue','on');
 		}
-	})
+  })
+  
+var tblTabIdx = $('.tbl_hover').find('tr');
+tblTabIdx.each(function(i, el){
+  var item = $(this);
+  item.prop('tabindex',0);
+})

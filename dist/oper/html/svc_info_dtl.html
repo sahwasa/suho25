@@ -78,16 +78,72 @@
 </div>
   <div id="content" class="content">
     <div class="content_tit">
-      <h1>전체 서비스 현황</h1>
+      <h1>서비스정보</h1>
     </div>
     <div class="content_body">
-
+      <div class="ipt_wrap flex_wrap">
+        <div class="section">
+          <div class="tbl_top alignR">
+            <a href="svc_info.html" class="btn btn_white">목록</a>
+            <span class="divideL">
+              <button type="button" class="btn btn_red">저장</button>
+              <button type="button" class="btn btn_blue">수정</button>
+              <button type="button" class="btn btn_gray">삭제</button>
+            </span>
+          </div>
+          <form class="box_gray">
+            <ul class="use_grid divide12 fullIpt">
+              <li class="w12">
+                <label for="" class="required">서비스코드</label>
+                <input type="text">
+                <div class="warn_box">서비스코드를 입력해주세요.</div>
+              </li>
+              <li class="w12">
+                <label for="" class="required">서비스 타입</label>
+                <input type="text">
+              </li>
+              <li class="w12">
+                <label for="">서비스 지역</label>
+                <input type="text">
+              </li>
+              <li class="w6">
+                <label for="">서비스 시작</label>
+                <input type="text">
+              </li>
+              <li class="w6">
+                <label for="">서비스 종료</label>
+                <input type="text">
+              </li>
+              <li class="w6">
+                <label for="">서비스 가격</label>
+                <input type="text">
+              </li>
+              <li class="w6">
+                <label for="">서비스 구분</label>
+                <select name="" id="">
+                  <option value="">구분</option>
+                </select>
+              </li>
+              <li class="w12">
+                <label for="">서비스 설명</label>
+                <textarea name="" id="" cols="30" rows="3"></textarea>
+              </li>
+            </ul>
+          </form>       
+        </div>
+        <div class="ipt_info box_grayLine">
+          <span>(<i class="required"></i>) 필수입력</span>
+          심심하니 뭐라도 넣어봐야겟다.
+          넣을 내용이 없네..   
+        </div>
+      </div>
     </div>
   </div>
   <div class="m_footer m_view">
     ⓒ SUHO25 Corp. All Rights Reserved.
   </div>
 </div>
+
 <a href="#" class="btn_top" title="맨위로">맨위로</a>
 </body>
 </html>

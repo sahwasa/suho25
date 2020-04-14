@@ -81,14 +81,18 @@
       <h1>서비스정보</h1>
     </div>
     <div class="content_body">
-      <div class="tbl_top clearfix">
-        <span class="fr">
+      <div class="tbl_top clearfix alignR">
+        <span class="flex_top">
           <select name="" id="" title="구분" class="first">
             <option value="">구분</option>
-            <option value="">완료</option>
+            <option value="">서비스코드</option>
           </select>
           <input type="text" placeholder="검색어" />
           <button type="button" class="btn btn_blueline">검색</button>
+        </span>
+        <span class="clear_flex divideL">
+          <a href="svc_info.html" class="btn btn_blue">추가</a>
+          <button type="button" class="btn btn_gray">삭제</button>
         </span>
       </div>
       <div class="tbl_wrap">
@@ -118,7 +122,8 @@
               <col span="6"/>
             </colgroup>
             <tbody>
-              <tr class="on">
+              <tr class="on" onclick="location.href='svc_info_dtl.html'" 
+              onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
                 <td>1</td>
                 <td><label for="">서비스명</label> 제주소상공인지킴이</td>
                 <td><label for="">서비스코드</label> ANP001</td>
@@ -159,6 +164,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="m_footer m_view">
+    ⓒ SUHO25 Corp. All Rights Reserved.
   </div>
 </div>
 

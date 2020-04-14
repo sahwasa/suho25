@@ -74,7 +74,7 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 [streetView="off"] .mapArea{height:100%;}
 [streetView="off"] .streetArea{height:0;}
 
-.pop_areaDtl{position:absolute;left:50%;top:200px;width:310px;text-align:left;background-color:#fff;border:1px solid #b7b7b7;}
+.pop_areaDtl{position:absolute;width:310px;text-align:left;background-color:#fff;}
 .pop_areaDtl .pop_tit{position:relative;border-bottom: 1px solid #ccc;}
 .pop_areaDtl .pop_tit h1{display:block;color:#4a77dc;padding:15px 45px 15px 15px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .pop_areaDtl .pop_tit .axi_del{position:absolute;right:12px;top:50%;height:24px;margin-top:-12px;}

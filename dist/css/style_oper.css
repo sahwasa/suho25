@@ -1,9 +1,13 @@
+/**
+ * 파일명: styme_oper.css
+
+**/
 /* monitoring */
 .monitoring{position:relative;width:100%;height:100%;padding:0;}
 .ax5-ui-toast-container.top-left{left:50%;margin-left:-160px;}
 .ax5-ui-toast-container [data-ax-toast-btn="ok"]{padding:0;background-color:transparent!important;border:none!important;box-shadow: none!important;}
 .ax5-ui-toast-container .axi_cirClose::before{font-size:15px;color:#d9534f;}
-.gisAside{position:absolute;left:0;top:0;width:278px;height:100%;border-right:1px solid #b7b7b7;background-color:#fff;z-index:100;}
+.gisAside{position:absolute;left:0;top:0;width:278px;height:100%;border-right:1px solid #b7b7b7;background-color:#fff;z-index:900;}
 .gisAside .btn_toggle{position:absolute;right:-20px;top:50%;margin-top:-25px;width:20px;height:50px;font-size:0;background-color:#fff;border:1px solid #b7b7b7;border-left-width:0;border-radius:0 3px 3px 0;}
 .gisAside .btn_toggle::before{content:"\f0da";font-family:'axicon';color:#666;font-size:14px;}
 .gisAside .btn_toggle[datavalue="on"]::before{content:"\f0d9";}
@@ -113,7 +117,38 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 .status h2{display:block;width:100%;margin-top:8px;}
 .status b{font-size:22px;margin-right:3px;}
 
-.m_view{display:none;}
+/* svc_status */
+.place_photo{width:400px;overflow:hidden;margin-right:30px;}
+.place_photo img{width:100%;height:auto;}
+.figure_list{margin-top:15px;flex-wrap:wrap;}
+.figure_list li{width:31.3333%;margin:0 0 2% 1%;}
+.figure_list li:nth-child(3n+1){margin-left:0;}
+.svc_status .ipt_wrap{width:calc(100% - 400px);}
+.svc_status .ipt_wrap .ipt_form{margin-top:30px;}
+.svc_status .ipt_wrap > .ipt_form:first-of-type{margin-top:0;}
+.svc_status .ipt_wrap .flex_wrap fieldset{width:50%;margin-left:25px;}
+.svc_status .ipt_wrap .flex_wrap fieldset:first-of-type{margin-left:0;}
+.svc_status .ipt_wrap textarea{height:34px;}
+.svc_status .tbl_default label{width:100px}
+@media screen and (max-width:1280px){
+  .svc_status .ipt_wrap .flex_wrap{display:block;margin-top:25px;}
+  .svc_status .ipt_wrap .flex_wrap fieldset{width:100%;margin:0;}
+  .svc_status .tab01 .place_photo{width:300px;}
+  .svc_status .tab01 .cmmn_info{width:calc(100% - 300px);}
+}
+@media screen and (max-width:668px){
+  .svc_status .tab01 > .flex_wrap{display:block;}
+  .svc_status .tab01 .place_photo,
+  .svc_status .tab01 .cmmn_info{width:100%;margin:0;}
+}
+
+/* assign */
+.assign .fixed_info,
+.assign .ipt_info{width:48%;margin-left:2%;}
+.assign .fixed_info{margin-left:0;background-color:#f8f9fb;padding:25px;}
+.assign .fixed_info fieldset{margin-top:25px;}
+.assign .fixed_info fieldset:first-of-type{margin-top:0;}
+/* .assign .fixed_info dt{background-color:;} */
 
 /* ios css핵 */
 @supports (-webkit-overflow-scrolling: touch) {

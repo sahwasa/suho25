@@ -35,13 +35,27 @@
     header.toggleClass(full_lnb);
     (header.hasClass(full_lnb))?$('body').css("overflow","hidden"):$('body').css("overflow","visible")
   })
+  var myIpt = $('[myInfoIpt]'),
+      myInfoLayer = $('[myInfoLayer]');
   $('[myInfo]').on({
     'mouseenter' : function(){
-      $('[myInfoLayer]').addClass('open');
+      if($('.my_infoDtl').hasClass('open')) return;
+      myInfoLayer.addClass('open');
     },
     'mouseleave' : function(){
-      $('[myInfoLayer]').removeClass('open');
+      myInfoLayer.removeClass('open');
+    },
+    'focusout' : function(){
+      myInfoLayer.removeClass('open');
     }
+  })
+  myIpt.on('click',function(){
+    myInfoLayer.removeClass('open');
+    $('.my_infoDtl').toggleClass('open');
+  })
+  $('[myIptClose]').on('click',function(){
+    myInfoLayer.removeClass('open');
+    $('.my_infoDtl').removeClass('open');
   })
 
 	/* layer_popup */
@@ -73,11 +87,11 @@
         objHtml.css('overflow','auto');
       }
     });
-		/* fileDeco */
-		function fileNameInput(){
-			var fName=$('#file').val().split('\\');
-			$('#file_name').val($(fName)[2]);
-		}
+  /* fileDeco */
+  function fileNameInput(){
+    var fName=$('#file').val().split('\\');
+    $('#file_name').val($(fName)[2]);
+  }
 
   /*calendar*/
   $.datepicker.setDefaults({
@@ -134,21 +148,22 @@
   //   oneLine: true
   // });
 
-	// jqgridInit();
 })(jQuery);
 
-// function jqgridInit(){
-// 	$('.jq-grid').each(function(){
-// 		$(this).setGridWidth($(this).parents('.article_body').width() - 2);
-// 	});
-// }
-// $(window).on('resize', function() {
-// 	jqgridInit();
-// });
-
+var tabBtn = $('.tab_list > li');
+  tab_cont = $('.tab_conts > .tab_cont');
+tab_cont.hide().eq(0).show();
+tabBtn.on('click',function(e){
+  e.preventDefault();
+  var cur = $(this).index(),
+      thisCont =  $(this).parents('.tab').next('.tab_conts');
+      tabBtn.removeClass('on');
+      $(this).addClass('on');
+      tab_cont.hide();
+  thisCont.children('.tab_cont').eq(cur).show();  
+})
 
 // slectlist evt
-  
   var selList = $('[role="checklist"]'),
       selBtn = selList.find('input'),
       allBtn = $('[role="all"]');    
@@ -185,18 +200,6 @@
     thisAll.prop('checked',true).parents('label').addClass('on') :
     thisAll.prop('checked',false).parents('label').removeClass('on');
   }
-  function marsEvt(selP){
-    var checkLeng = selP.find(':checkbox:checked').length,
-        thisAll = selP.prev('label').find('[role="all"]'),
-        thisAllTxt = selP.prev('label').find('.txt');
-    if(checkLeng > 0){
-      thisAll.prop('checked',true).parents('label').addClass('on')
-      thisAllTxt.text('ON')
-     }else{
-      thisAllTxt.text("OFF");
-      thisAll.prop('checked',false).parents('label').removeClass('on')
-     }
-  }
   allBtn.on('change',function(){
     var sel = $(this),
         selUl = $(this).parent('label').next('ul'),
@@ -222,4 +225,10 @@
 		}else{
 				$(this).attr('datavalue','on');
 		}
-	})
+  })
+  
+var tblTabIdx = $('.tbl_hover').find('tr');
+tblTabIdx.each(function(i, el){
+  var item = $(this);
+  item.prop('tabindex',0);
+})

@@ -30,21 +30,23 @@
   <div class="my_infoArea clearfix" myInfo>
     <b>홍길동</b>
     <span class="btn_wrap fr" myInfoLayer>
-      <button type="button" class="btn btn_s">내정보</button>
+      <button type="button" class="btn btn_s" myInfoIpt>내정보</button>
       <button type="button" class="btn btn_s">로그아웃</button>
     </span>
     <div class="my_infoDtl">
-      <ul class="my_info">
-        <li class="info_id"><input type="text" placeholder="아이디(이메일)" /></li>
-        <li class="info_phone"><input type="text" placeholder="연락처" /></li>
-        <li class="info_name"><input type="text" placeholder="이름" /></li>
-        <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
-        <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
-      </ul>
-      <div class="btnArea">
-        <button type="button" class="btn btn_red">저장</button>
-        <button type="button" class="btn btn_gray">취소</button>
-      </div>
+      <form>        
+        <ul class="my_info">
+          <li class="info_id">abcdefghight@gmail.com</li>
+          <li class="info_phone">010-1234-5678</li>
+          <li class="info_name"><input type="text" placeholder="이름" /></li>
+          <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
+          <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
+        </ul>
+        <div class="btnArea">
+          <button type="button" class="btn btn_red">저장</button>
+          <button type="button" class="btn btn_gray" myIptClose>취소</button>
+        </div>
+      </form>
     </div>
   </div>
   <div class="util m_view">
@@ -70,7 +72,7 @@
         <li><a href="">서브2</a></li>
       </ul>
     </li>
-    <li><a href="/oper/html/assign_engineer.html">설치기사배정</a></li>
+    <li><a href="/oper/html/assign.html">설치기사배정</a></li>
   </ul>
   <div class="footer">
     ⓒ SUHO25 Corp. All Rights Reserved.
@@ -81,14 +83,18 @@
       <h1>서비스정보</h1>
     </div>
     <div class="content_body">
-      <div class="tbl_top clearfix">
-        <span class="fr">
+      <div class="tbl_top clearfix alignR">
+        <span class="flex_top">
           <select name="" id="" title="구분" class="first">
             <option value="">구분</option>
-            <option value="">완료</option>
+            <option value="">서비스코드</option>
           </select>
           <input type="text" placeholder="검색어" />
           <button type="button" class="btn btn_blueline">검색</button>
+        </span>
+        <span class="clear_flex divideL">
+          <a href="svc_info.html" class="btn btn_blue">추가</a>
+          <button type="button" class="btn btn_gray">삭제</button>
         </span>
       </div>
       <div class="tbl_wrap">
@@ -100,13 +106,13 @@
           </colgroup>
           <thead>
             <tr>
-              <th scope="row">No.</th>
-              <th scope="row">서비스명</th>
-              <th scope="row">서비스코드</th>
-              <th scope="row">서비스지역</th>
-              <th scope="row">시작일</th>
-              <th scope="row">종료일</th>
-              <th scope="row">구분</th>
+              <th id="th01">No.</th>
+              <th id="th02">서비스명</th>
+              <th id="th03">서비스코드</th>
+              <th id="th04">서비스지역</th>
+              <th id="th05">시작일</th>
+              <th id="th06">종료일</th>
+              <th id="th07">구분</th>
               <th class="fix_scroll"></th>
             </tr>
           </thead>
@@ -118,47 +124,51 @@
               <col span="6"/>
             </colgroup>
             <tbody>
-              <tr class="on">
-                <td>1</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+              <tr class="on" onclick="location.href='svc_info_dtl.html'" 
+              onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
+                <td headers="th01">1</td>
+                <td headers="th02"><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td headers="th03"><label for="">서비스코드</label> ANP001</td>
+                <td headers="th04"><label for="">서비스지역</label> 제주</td>
+                <td headers="th05"><label for="">시작일</label> 2020-03-01</td>
+                <td headers="th06"><label for="">종료일</label> 2020-05-01</td>
+                <td headers="th07" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
               </tr>
               <tr>
-                <td>2</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+                <td headers="th01">2</td>
+                <td headers="th02"><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td headers="th03"><label for="">서비스코드</label> ANP001</td>
+                <td headers="th04"><label for="">서비스지역</label> 제주</td>
+                <td headers="th05"><label for="">시작일</label> 2020-03-01</td>
+                <td headers="th06"><label for="">종료일</label> 2020-05-01</td>
+                <td headers="th07" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
               </tr>
               <tr>
-                <td>3</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+                <td headers="th01">3</td>
+                <td headers="th02"><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td headers="th03"><label for="">서비스코드</label> ANP001</td>
+                <td headers="th04"><label for="">서비스지역</label> 제주</td>
+                <td headers="th05"><label for="">시작일</label> 2020-03-01</td>
+                <td headers="th06"><label for="">종료일</label> 2020-05-01</td>
+                <td headers="th07" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
               </tr>
               <tr>
-                <td>4</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
+                <td headers="th01">4</td>
+                <td headers="th02"><label for="">서비스명</label> 제주소상공인지킴이</td>
+                <td headers="th03"><label for="">서비스코드</label> ANP001</td>
+                <td headers="th04"><label for="">서비스지역</label> 제주</td>
+                <td headers="th05"><label for="">시작일</label> 2020-03-01</td>
+                <td headers="th06"><label for="">종료일</label> 2020-05-01</td>
+                <td headers="th07" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+  </div>
+  <div class="m_footer m_view">
+    ⓒ SUHO25 Corp. All Rights Reserved.
   </div>
 </div>
 

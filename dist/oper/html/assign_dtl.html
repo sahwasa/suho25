@@ -80,89 +80,70 @@
 </div>
   <div id="content" class="content">
     <div class="content_tit">
-      <h1>서비스 이용현황</h1>
+      <h1>설치기사배정</h1>
     </div>
     <div class="content_body">
-      <div class="tbl_top clearfix alignR">
-        <span class="flex_top">
-          <select name="" id="" title="구분" class="first">
-            <option value="">구분</option>
-            <option value="">서비스코드</option>
-          </select>
-          <input type="text" placeholder="검색어" />
-          <button type="button" class="btn btn_blueline">검색</button>
-        </span>
-        <span class="clear_flex divideL">
-          <a href="svc_info.html" class="btn btn_blue">추가</a>
-          <button type="button" class="btn btn_gray">삭제</button>
-        </span>
-      </div>
-      <div class="tbl_wrap">
-        <table class="tbl_default tbl_idx">
-          <colgroup>
-            <col class="idx" />
-            <col span="6"/>
-            <col class="fix_scroll" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th scope="row">No.</th>
-              <th scope="row">서비스명</th>
-              <th scope="row">서비스코드</th>
-              <th scope="row">서비스지역</th>
-              <th scope="row">시작일</th>
-              <th scope="row">종료일</th>
-              <th scope="row">구분</th>
-              <th class="fix_scroll"></th>
-            </tr>
-          </thead>
-        </table>
-        <div class="tbl_scroll">
-          <table class="tbl_default tbl_hover tbl_idx">
-            <colgroup>
-              <col class="idx" />
-              <col span="6"/>
-            </colgroup>
-            <tbody>
-              <tr class="on" onclick="location.href='svc_status_dtl.html'" 
-              onKeypress="javascript:if(event.keyCode==13) {location.href='svc_status_dtl.html'}">
-                <td>1</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td><label for="">서비스명</label> 제주소상공인지킴이</td>
-                <td><label for="">서비스코드</label> ANP001</td>
-                <td><label for="">서비스지역</label> 제주</td>
-                <td><label for="">시작일</label> 2020-03-01</td>
-                <td><label for="">종료일</label> 2020-05-01</td>
-                <td class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">구분</label> 완료</i></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="flex_wrap assign">
+        <div class="ipt_wrap fixed_info">
+          <fieldset class="ipt_form">
+            <legend>기본정보</legend>
+            <dl class="use_grid fullIpt divide10">
+              <dt class="w3">서비스명</dt>
+              <dd class="w7">제주 소상공인 지킴이</dd>
+              <dt class="w3">신청자</dt>
+              <dd class="w7">홍길동</dd>
+              <dt class="w3">제품(코드)</dt>
+              <dd class="w7">큐리언(Q-001)</dd>
+              <dt class="w3">제품색상</dt>
+              <dd class="w7">화이트</dd>
+            </dl>
+          </fieldset>
+          <fieldset class="ipt_form">
+            <legend>점포정보</legend>
+            <dl class="use_grid fullIpt divide10">
+              <dt class="w3">상호</dt>
+              <dd class="w7">제주맛집</dd>
+              <dt class="w3">점주</dt>
+              <dd class="w7">이순실</dd>
+              <dt class="w3">점포번호</dt>
+              <dd class="w7">064-123-4567</dd>
+              <dt class="w3">비상연락번호</dt>
+              <dd class="w7">010-1234-5678</dd>
+              <dt class="w3">주소</dt>
+              <dd class="w7">제주도 제주시 제주로123 제주로123제주로123제주로123</dd>
+            </dl>
+          </fieldset>
+        </div>
+        <div class="ipt_wrap ipt_info">
+          <fieldset class="ipt_form">
+            <legend>해피콜</legend>
+            <ul class="use_grid fullIpt">
+              <li>
+                <label for="" class="required">상호</label>
+                <input type="text">
+              </li>
+              <li>
+                <label for="">점주</label>
+                <input type="text">
+              </li>
+              <li>
+                <label for="">점포번호</label>
+                <input type="text">
+              </li>
+              <li>
+                <label for="">비상연락번호</label>
+                <input type="text">
+              </li>
+              <li>
+                <label for="">주소</label>
+                <input type="text">
+              </li>
+            </ul>
+            <div class="btn_wrap">
+              <button type="button" class="btn btn_red">저장</button>
+              <button type="button" class="btn btn_whiteline">취소</button>
+            </div>
+          </fieldset>
         </div>
       </div>
     </div>
@@ -171,6 +152,7 @@
     ⓒ SUHO25 Corp. All Rights Reserved.
   </div>
 </div>
+
 <a href="#" class="btn_top" title="맨위로">맨위로</a>
 </body>
 </html>

@@ -53,7 +53,7 @@
   .my_infoArea .btn_wrap .btn:hover{color:#333;background-color:#ececec;}
   .my_infoArea .btn_wrap.open{display:block;}
 
-  .my_infoDtl{position:absolute;right:-20px;top:45px;width:300px;height:auto;background:#333;border-radius:0;margin-top:0;}
+  .my_infoDtl{position:absolute;right:-20px;top:45px;width:300px;height:auto;background:#333;border-radius:0;margin-top:0;padding:10px 5px;box-shadow:0 0 5px rgba(0,0,0,.4) inset;border-radius:3px;}
 
   .gnb{display:none;z-index:900;}
   .util{position:absolute;left:15px;top:0;top:-1px\0;width:auto;text-align:center;z-index:999;}
@@ -89,26 +89,31 @@
   .use_grid,
   .defalut_iptList{margin:-10px -5px 0;}
   .defalut_iptList li,
-  .use_grid li{padding:10px 5px 0;}
-  
+  .use_grid li{padding:10px 5px 0;}  
 }
 @media screen and (max-width:668px){
   /* 모바일 */
   body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
 
   .btn{padding:3px 8px 4px;}
-
+  
   /* box */
   .info_box{padding:10px;}
   .box_gray{padding:10px;}
   .box_grayLine{padding:8px;}
-
+  
   .ipt_wrap{display:block;}
   .ipt_wrap .section,
   .ipt_wrap .ipt_info{width:100%;}
   .ipt_wrap .ipt_info{margin:20px 0 0;}
+  .use_grid{flex-direction:column;}
+  .use_grid li{width:100%!important;}
 
-
+  .tab{margin-bottom:10px;}
+  .tab_btns .btn{padding:1px 8px 2px;}
+  .tabCont_btns{margin-bottom:5px;}
+  
+  legend{margin-bottom:10px;}
   /* table */
   .tbl_top .clear_flex .btn,
   .tbl_top .flex_top *{min-width:60px;}
@@ -116,6 +121,7 @@
   .tbl_default tbody .no_sum{width:60px;}
 
   /* aside */
+  
   .my_infoArea{right:5px;}
   .my_infoArea .btn_wrap{width:80px;}
   .aside .util{left:0px;}
@@ -123,7 +129,6 @@
   .full_lnb .sub a{font-size:12px;padding:10px;}
   .my_infoDtl{right:-5px;}
   .my_info li{padding-left:25px;}
-
 
   .content{padding:20px 10px 40px;}  
   .content_tit{padding-bottom:5px;margin-bottom:15px;}
@@ -148,6 +153,7 @@
   input,
   select,
   textarea{-webkit-appearance:none;border-radius:0;}  
+  select{padding:1px 5px 2px;}
   .tbl_scroll{height:auto;}
   .fix_scroll{width:0;}
   .box_gray{background-color:#f0f3f5;border-color:#e4e7e9;}

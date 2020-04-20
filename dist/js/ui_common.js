@@ -87,11 +87,11 @@
         objHtml.css('overflow','auto');
       }
     });
-		/* fileDeco */
-		function fileNameInput(){
-			var fName=$('#file').val().split('\\');
-			$('#file_name').val($(fName)[2]);
-		}
+  /* fileDeco */
+  function fileNameInput(){
+    var fName=$('#file').val().split('\\');
+    $('#file_name').val($(fName)[2]);
+  }
 
   /*calendar*/
   $.datepicker.setDefaults({
@@ -150,10 +150,20 @@
 
 })(jQuery);
 
-
+var tabBtn = $('.tab_list > li');
+  tab_cont = $('.tab_conts > .tab_cont');
+tab_cont.hide().eq(0).show();
+tabBtn.on('click',function(e){
+  e.preventDefault();
+  var cur = $(this).index(),
+      thisCont =  $(this).parents('.tab').next('.tab_conts');
+      tabBtn.removeClass('on');
+      $(this).addClass('on');
+      tab_cont.hide();
+  thisCont.children('.tab_cont').eq(cur).show();  
+})
 
 // slectlist evt
-  
   var selList = $('[role="checklist"]'),
       selBtn = selList.find('input'),
       allBtn = $('[role="all"]');    
@@ -189,18 +199,6 @@
     (checkLeng === allLeng) ?
     thisAll.prop('checked',true).parents('label').addClass('on') :
     thisAll.prop('checked',false).parents('label').removeClass('on');
-  }
-  function marsEvt(selP){
-    var checkLeng = selP.find(':checkbox:checked').length,
-        thisAll = selP.prev('label').find('[role="all"]'),
-        thisAllTxt = selP.prev('label').find('.txt');
-    if(checkLeng > 0){
-      thisAll.prop('checked',true).parents('label').addClass('on')
-      thisAllTxt.text('ON')
-     }else{
-      thisAllTxt.text("OFF");
-      thisAll.prop('checked',false).parents('label').removeClass('on')
-     }
   }
   allBtn.on('change',function(){
     var sel = $(this),

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <title>수호25 운영자</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="../../plugins/axicon/axicon.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/style_oper.css" rel="stylesheet">
+    <link href="../../css/style_m.css" rel="stylesheet">
+    <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5core/dist/ax5core.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5ui-toast/dist/ax5toast.min.js"></script>
+  </head>
+  <body>
+<!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#nav">주메뉴 바로가기</a>
+</div>
+<hr class="access_divide" />
+<!-- 바로가기 메뉴__e -->
+<div class="wrap">
+  <div id="nav" class="aside">
+  <h1 class="tit_logo"><a href="" title="메인">SUHO25-TOP SAFETY</a></h1>
+  <div class="my_infoArea clearfix" myInfo>
+    <b>홍길동</b>
+    <span class="btn_wrap fr" myInfoLayer>
+      <button type="button" class="btn btn_s" myInfoIpt>내정보</button>
+      <button type="button" class="btn btn_s">로그아웃</button>
+    </span>
+    <div class="my_infoDtl">
+      <form>        
+        <ul class="my_info">
+          <li class="info_id">abcdefghight@gmail.com</li>
+          <li class="info_phone">010-1234-5678</li>
+          <li class="info_name"><input type="text" placeholder="이름" /></li>
+          <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
+          <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
+        </ul>
+        <div class="btnArea">
+          <button type="button" class="btn btn_red">저장</button>
+          <button type="button" class="btn btn_gray" myIptClose>취소</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="util m_view">
+    <button class="btn_navToggle" toggle_nav><span class="ico">메뉴</span></button>
+  </div>
+  <ul class="gnb" role="navigation">
+    <li><a href="/oper/html/monitoring.html" title="새창열림" target="_blank">모니터링 <i class="axi_only axi_newOpen">새창열림</i></a></li>
+    <li class="on"><a href="/oper/html/svc_info.html">서비스정보</a>
+      <ul class="sub">
+        <li class="on"><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/product_info.html">제품정보</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/svc_status.html">서비스 이용현황</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/assign.html">설치기사배정</a></li>
+  </ul>
+  <div class="footer">
+    ⓒ SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+  <div id="content" class="content">
+    <div class="content_tit">
+      <h1>서비스 이용현황</h1>
+    </div>
+    <div class="content_body">
+      <div class="tab">
+        <ul class="tab_list clearfix">
+          <li class="on"><a href="#">기본정보</a></li>
+          <li><a href="#">상태정보</a></li>
+          <li><a href="#">신고접수</a></li>
+        </ul>
+        <span class="tab_btns">
+          <a href="svc_status.html" class="btn btn_white btn_list">목록</a>
+        </span>
+      </div>
+      <div class="tab_conts svc_status">
+        <div class="tab_cont tab01">
+          <div class="tabCont_btns alignR">
+            <button type="button" class="btn btn_red">저장</button>
+            <button type="button" class="btn btn_blue">수정</button>
+            <button type="button" class="btn btn_gray">삭제</button>
+          </div>
+          <div class="flex_wrap">
+            <div class="place_photo figure">
+              <img src="http://placehold.it/400x400x" alt="설치장소 사진">
+              <ul class="flex_wrap figure_list">
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+                <li><img src="http://placehold.it/200x200" alt=""></li>
+              </ul>
+            </div>
+            <div class="ipt_wrap cmmn_info">
+              <fieldset class="ipt_form">
+                <legend>가입자정보</legend>
+                <ul class="use_grid divide12 fullIpt">
+                  <li class="w12">
+                    <label for="" class="required">서비스명</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">신청자</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">핸드폰</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">서비스 시작</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">서비스 종료</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">제품번호</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">제품색상</label>
+                    <select name="" id="">
+                      <option value="">구분</option>
+                    </select>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="ipt_form">
+                <legend>설치장소</legend>
+                <ul class="use_grid divide12 fullIpt">
+                  <li class="w6">
+                    <label for="" class="required">상호</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">점주</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">점포번호</label>
+                    <input type="text">
+                  </li>
+                  <li class="w6">
+                    <label for="">비상연락번호</label>
+                    <input type="text">
+                  </li>
+                  <li class="w12">
+                    <label for="">주소</label>
+                    <input type="text">
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="flex_wrap">
+                <fieldset class="ipt_form">
+                  <legend>비상연락망</legend>
+                  <ol class="li_num fullIpt">
+                    <li><input type="text" /></li>
+                    <li><input type="text" /></li>
+                    <li><input type="text" /></li>
+                    <li><input type="text" /></li>
+                    <li><input type="text" /></li>
+                  </ol>
+                </fieldset>
+                <fieldset class="ipt_form">
+                  <legend>설치기사 작성내용</legend>  
+                  <ul class="use_grid divide12 fullIpt">
+                    <li class="w12">
+                      <label for="" class="required">설치날자</label>
+                      <input type="text">
+                    </li>
+                    <li class="w6">
+                      <label for="" class="required">상태정보</label>
+                      <input type="text">
+                    </li>
+                    <li class="w6">
+                      <label for="" class="required">이벤트정보</label>
+                      <input type="text">
+                    </li>
+                    <li class="w12">
+                      <label for="" class="required">특이사항</label>
+                      <textarea name="" id="" cols="30" rows="1"></textarea>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- tab01__e -->
+        <div class="tab_cont" id="tab02">
+          <div class="tbl_wrap">
+            <table class="tbl_default tbl_idx">
+              <colgroup>
+                <col class="idx" />
+                <col span="3"/>
+                <col class="fix_scroll" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th id="tab2_th01">No.</th>
+                  <th id="tab2_th02">상태전송시각
+                    <span class="sort_btns">
+                      <button type="button" class="asc">오름차순</button>
+                      <button type="button" class="desc">내림차순</button>
+                    </span>
+                  </th>
+                  <th id="tab2_th03">경도
+                    <span class="sort_btns">
+                      <button type="button" class="asc">오름차순</button>
+                      <button type="button" class="desc">내림차순</button>
+                    </span>
+                  </th>
+                  <th id="tab2_th04">위도</th>
+                  <th class="fix_scroll"></th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll">
+              <table class="tbl_default tbl_hover tbl_idx">
+                <colgroup>
+                  <col class="idx" />
+                  <col span="3"/>
+                </colgroup>
+                <tbody>
+                  <tr class="on" onclick="location.href='svc_info_dtl.html'" 
+                  onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
+                    <td headers="tab2_th01">1</td>
+                    <td headers="tab2_th02"><label for="">상태전송시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab2_th03"><label for="">경도</label>126.416441421 </td>
+                    <td headers="tab2_th04"><label for="">위도</label>33.4390714831
+                    </td>
+                  </tr>
+                  <tr>
+                    <td headers="tab2_th01">2</td>
+                    <td headers="tab2_th02"><label for="">상태전송시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab2_th03"><label for="">경도</label>126.416441421 </td>
+                    <td headers="tab2_th04"><label for="">위도</label>33.4390714831
+                    </td>
+                  </tr>
+                  <tr>
+                    <td headers="tab2_th01">3</td>
+                    <td headers="tab2_th02"><label for="">상태전송시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab2_th03"><label for="">경도</label>126.416441421 </td>
+                    <td headers="tab2_th04"><label for="">위도</label>33.4390714831
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- tab02__e -->
+        <div class="tab_cont" id="tab03">
+          <div class="tbl_wrap">
+            <table class="tbl_default tbl_idx">
+              <colgroup>
+                <col class="idx" />
+                <col span="5"/>
+                <col class="fix_scroll" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th id="tab3_th01">No.</th>
+                  <th id="tab3_th02">발생시각</th>
+                  <th id="tab3_th03">메시지코드</th>
+                  <th id="tab3_th04">위험감지</th>
+                  <th id="tab3_th05">감지파일</th>
+                  <th id="tab3_th06">처리결과</th>
+                  <th class="fix_scroll"></th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll">
+              <table class="tbl_default tbl_hover tbl_idx">
+                <colgroup>
+                  <col class="idx" />
+                  <col span="5"/>
+                </colgroup>
+                <tbody>
+                  <tr class="on" onclick="location.href='svc_info_dtl.html'" 
+                  onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
+                    <td headers="tab3_th01">1</td>
+                    <td headers="tab3_th02"><label for="">발생시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab3_th03"><label for="">메시지코드</label>9000</td>
+                    <td headers="tab3_th04"><label for="">위험감지</label>음성감지
+                    <td headers="tab3_th04"><label for="">감지파일</label>정상수신
+                    </td>
+                    <td headers="tab3_th06" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">결과</label> 완료</i></td>
+                  </tr>
+                  <tr>
+                    <td headers="tab3_th01">2</td>
+                    <td headers="tab3_th02"><label for="">발생시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab3_th03"><label for="">메시지코드</label>9000</td>
+                    <td headers="tab3_th04"><label for="">위험감지</label>음성감지
+                    <td headers="tab3_th04"><label for="">감지파일</label>정상수신
+                    </td>
+                    <td headers="tab3_th06" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">결과</label> 완료</i></td>
+                  </tr>
+                  <tr>
+                    <td headers="tab3_th01">3</td>
+                    <td headers="tab3_th02"><label for="">발생시각</label>2020-03-02 15:00:30</td>
+                    <td headers="tab3_th03"><label for="">메시지코드</label>9000</td>
+                    <td headers="tab3_th04"><label for="">위험감지</label>음성감지
+                    <td headers="tab3_th04"><label for="">감지파일</label>정상수신
+                    </td>
+                    <td headers="tab3_th06" class="no_sum"><i class="axib axi_cirCheck t_skyblue"><label for="">결과</label> 완료</i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- tab03__e -->
+      </div>
+    </div>
+  </div>
+  <div class="m_footer m_view">
+    ⓒ SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+
+<a href="#" class="btn_top" title="맨위로">맨위로</a>
+</body>
+</html>
+<script src="/js/ui_common.js"></script>

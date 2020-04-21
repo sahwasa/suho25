@@ -84,18 +84,21 @@
   .content_tit{padding-bottom:10px;margin-bottom:20px;}
   .content_tit h1{font-size:1.25em;}
 }
-@media screen and (max-aspect-ratio: 1/1) and (max-width:1024px) {
+@media screen and (max-aspect-ratio: 1/1) and (max-width:1023px) {
   /* 태블릿 세로모드 */
   .use_grid,
   .defalut_iptList{margin:-10px -5px 0;}
   .defalut_iptList li,
-  .use_grid li{padding:10px 5px 0;}  
+  .use_grid > li{padding:10px 5px 0;}  
 }
 @media screen and (max-width:668px){
   /* 모바일 */
   body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
-
+  
   .btn{padding:3px 8px 4px;}
+  .btn_list::before,
+  .axi_only::before,
+  .axib::before{font-family:'axicon';font-size:15px;}
   
   /* box */
   .info_box{padding:10px;}
@@ -107,7 +110,7 @@
   .ipt_wrap .ipt_info{width:100%;}
   .ipt_wrap .ipt_info{margin:20px 0 0;}
   .use_grid{flex-direction:column;}
-  .use_grid li{width:100%!important;}
+  .use_grid > li{width:100%!important;}
 
   .tab{margin-bottom:10px;}
   .tab_btns .btn{padding:1px 8px 2px;}
@@ -152,7 +155,8 @@
   /* ios css핵 */
   input,
   select,
-  textarea{-webkit-appearance:none;border-radius:0;}  
+  textarea{-webkit-appearance:none;border-radius:0;}
+  input[type="radio"]{-webkit-appearance:radio;}
   select{padding:1px 5px 2px;}
   .tbl_scroll{height:auto;}
   .fix_scroll{width:0;}

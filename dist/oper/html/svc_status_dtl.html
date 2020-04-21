@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
     <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/pop.css" rel="stylesheet">
     <link href="../../css/style_oper.css" rel="stylesheet">
     <link href="../../css/style_m.css" rel="stylesheet">
     <script src="../../plugins/jquery/dist/jquery.min.js"></script>
@@ -73,6 +74,7 @@
       </ul>
     </li>
     <li><a href="/oper/html/assign.html">설치기사배정</a></li>
+    <li><a href="/oper/html/assign.html">제품설치대기</a></li>
   </ul>
   <div class="footer">
     ⓒ SUHO25 Corp. All Rights Reserved.
@@ -102,15 +104,15 @@
           </div>
           <div class="flex_wrap">
             <div class="place_photo figure">
-              <img src="http://placehold.it/400x400x" alt="설치장소 사진">
-              <ul class="flex_wrap figure_list">
+              <img src="http://placehold.it/400x600" alt="설치장소 사진">
+              <!-- <ul class="flex_wrap figure_list">
                 <li><img src="http://placehold.it/200x200" alt=""></li>
                 <li><img src="http://placehold.it/200x200" alt=""></li>
                 <li><img src="http://placehold.it/200x200" alt=""></li>
                 <li><img src="http://placehold.it/200x200" alt=""></li>
                 <li><img src="http://placehold.it/200x200" alt=""></li>
                 <li><img src="http://placehold.it/200x200" alt=""></li>
-              </ul>
+              </ul> -->
             </div>
             <div class="ipt_wrap cmmn_info">
               <fieldset class="ipt_form">
@@ -118,7 +120,7 @@
                 <ul class="use_grid divide12 fullIpt">
                   <li class="w12">
                     <label for="" class="required">서비스명</label>
-                    <input type="text">
+                    <input type="text" disabled value="제주소상공인지킴이(스탠드형)">
                   </li>
                   <li class="w6">
                     <label for="">신청자</label>
@@ -130,11 +132,11 @@
                   </li>
                   <li class="w6">
                     <label for="">서비스 시작</label>
-                    <input type="text">
+                    <input type="date">
                   </li>
                   <li class="w6">
                     <label for="">서비스 종료</label>
-                    <input type="text">
+                    <input type="date">
                   </li>
                   <li class="w6">
                     <label for="">제품번호</label>
@@ -151,11 +153,11 @@
               <fieldset class="ipt_form">
                 <legend>설치장소</legend>
                 <ul class="use_grid divide12 fullIpt">
-                  <li class="w6">
+                  <li class="w9">
                     <label for="" class="required">상호</label>
                     <input type="text">
                   </li>
-                  <li class="w6">
+                  <li class="w3">
                     <label for="">점주</label>
                     <input type="text">
                   </li>
@@ -167,9 +169,18 @@
                     <label for="">비상연락번호</label>
                     <input type="text">
                   </li>
+                  <li class="w4 btn1Ipt">
+                    <label for="">우편번호</label>
+                    <input type="text" value="99999">
+                    <button type="button" class="btn btn_blueline" openpop="pop_findAddr">검색</button>
+                  </li>
+                  <li class="w8">
+                    <label for="">기본주소</label>
+                    <input type="text" />
+                  </li>
                   <li class="w12">
-                    <label for="">주소</label>
-                    <input type="text">
+                    <label for="">상세주소</label>
+                    <input type="text" />
                   </li>
                 </ul>
               </fieldset>
@@ -187,10 +198,11 @@
                 <fieldset class="ipt_form">
                   <legend>설치기사 작성내용</legend>  
                   <ul class="use_grid divide12 fullIpt">
-                    <li class="w12">
-                      <label for="" class="required">설치날자</label>
-                      <input type="text">
+                    <li class="w6">
+                      <label for="">설치날자</label>
+                      <input type="date">
                     </li>
+                    <li class="w6">&nbsp;</li>
                     <li class="w6">
                       <label for="" class="required">상태정보</label>
                       <input type="text">
@@ -240,14 +252,13 @@
               </thead>
             </table>
             <div class="tbl_scroll">
-              <table class="tbl_default tbl_hover tbl_idx">
+              <table class="tbl_default tbl_idx">
                 <colgroup>
                   <col class="idx" />
                   <col span="3"/>
                 </colgroup>
                 <tbody>
-                  <tr class="on" onclick="location.href='svc_info_dtl.html'" 
-                  onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
+                  <tr>
                     <td headers="tab2_th01">1</td>
                     <td headers="tab2_th02"><label for="">상태전송시각</label>2020-03-02 15:00:30</td>
                     <td headers="tab2_th03"><label for="">경도</label>126.416441421 </td>
@@ -295,14 +306,13 @@
               </thead>
             </table>
             <div class="tbl_scroll">
-              <table class="tbl_default tbl_hover tbl_idx">
+              <table class="tbl_default tbl_idx">
                 <colgroup>
                   <col class="idx" />
                   <col span="5"/>
                 </colgroup>
                 <tbody>
-                  <tr class="on" onclick="location.href='svc_info_dtl.html'" 
-                  onKeypress="javascript:if(event.keyCode==13) {location.href='svc_info_dtl.html'}">
+                  <tr>
                     <td headers="tab3_th01">1</td>
                     <td headers="tab3_th02"><label for="">발생시각</label>2020-03-02 15:00:30</td>
                     <td headers="tab3_th03"><label for="">메시지코드</label>9000</td>
@@ -343,6 +353,90 @@
   </div>
 </div>
 
+<!-- 주소검색 팝업 -->
+<div class="overlay pop_overlay" id="pop_findAddr">
+  <div class="pop_wrap layer_pop pop_findAddr" tabindex="0" dataformat="modal" >
+    <div class="pop_header">
+      <h1>주소검색</h1>
+      <a href="" class="axi_only btn_close" role="btn_close" title="닫기">닫기</a>
+    </div>
+    <!-- pop_body높이 760px이 넘어가면 스크롤되게 해두었습니다 -->
+    <div class="pop_body">
+      <div class="box_grayLine" id="addr01">
+        <p>
+          하단 검색어 입력창에 찾는 <b class="t_red">도로명주소+건물번호&sol;건물명</b>
+          <br />혹은 <b class="t_red">지번주소+번지수&sol;건물명</b>을 입력해주세요.
+        </p>
+        <p class="t_gray ex">
+          예) 도로명 : 불정로 432번길 / 지번 : 정자동 178-1, 대치동 현대아파트
+        </p>
+        <div class="ipt_wrap">            
+          <input type="text" placeholder="검색어 입력"/>
+          <button type="button" class="btn btn_blue">검색</button>
+        </div>
+      </div>
+      <div class="list_wrap">
+        <div class="list_top">
+          <span class="t_blue">'금당로11'</span> 검색결과 입니다.
+          <span class="fr"><select name="" id=""><option value="">전체지역(13)</option></select></span>
+        </div>
+        <ul class="list_addr" tabindex="0">
+          <li class="on">
+            <a href="">
+              <p>경기도 군포시 금당로 166-1(금정동)경기도 군포시 금당로 166-1(금정동)</p>
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <em>14305(423-060)</em>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <em>14305(423-060)</em>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <em>14305(423-060)</em>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <em>14305(423-060)</em>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <p>경기도 군포시 금당로 166-1(금정동)</p>
+              <em>14305(423-060)</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="addr_dtl box_gray">
+        <h3>기본주소 선택 후 <span class="t_red">상세주소</span>를 반드시 입력해주세요.</h3>
+        <dl>
+          <dt>기본주소</dt>
+          <dd>경기도 군포시 금당로 166-1(금정동)</dd>
+          <dt><label for="addrDtl">상세주소</label></dt>
+          <dd><input type="text" id="addrDtl" /></dd>
+        </dl>
+      </div>
+      <div class="pop_footer">
+        <div class="li_btnAreaB">
+          <button type="button" class="btn btn_red">선택적용</button>
+          <button type="button" class="btn btn_grayline" role="btn_close">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 주소검색 팝업__e -->
 <a href="#" class="btn_top" title="맨위로">맨위로</a>
 </body>
 </html>

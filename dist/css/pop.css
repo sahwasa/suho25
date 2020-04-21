@@ -1,4 +1,6 @@
 .pop_overlay{display:none;}
+.pop_overlay .pop_wrap,
+.pop_overlay .layer_pop{display:block;}
 .pop_wrap{text-align:left;overflow:hidden;}
 .pop_header{display:block;position:relative;height:40px;background-color:#073973;padding:0 15px;cursor:move;}
 .pop_header h1{height:100%;font-size:18px;letter-spacing:-1px;color:#fff;line-height:40px;}
@@ -69,3 +71,10 @@
 .addr_dtl dt{float:left;width:60px;margin-right:10px;}
 .addr_dtl dd{width:calc(100% - 70px);}
 .addr_dtl dd input{width:100%;}
+@media screen and (max-width:1024px){
+  .layer_pop{top:0;left:0;}
+}
+@media screen and (max-aspect-ratio: 1/1) and (max-width:1024px) {
+  .layer_pop{left:0;top:0;width:100%;height:100%;}
+  .pop_findAddr .ipt_wrap .btn{padding:1px 8px 2px;}
+}

@@ -7,9 +7,7 @@
   closeSubH = 79,
   timer,
   delay = 300,
-  mobileSize = 768,
-  $locate=$('.locate_list>li'),
-  toggle_menu;
+  mobileSize = 768;
   header.on({
   'mouseenter': function(){
     if(header.hasClass(full_lnb) || $(window).outerWidth() <= mobileSize){
@@ -62,7 +60,7 @@
   var modal= $( "[dataformat='modal']" ),
       layer_pop = $(".pop_wrap");
 	  modal.draggable({
-      handle: ".pop_tit",
+      handle: ".pop_header",
       cursor: "move",
       containment: "parent",
       scroll:false
@@ -151,8 +149,8 @@
 
 })(jQuery);
 
-var tabBtn = $('.tab_list > li');
-  tab_cont = $('.tab_conts > .tab_cont');
+var tabBtn = $('.tab_list > li'),
+    tab_cont = $('.tab_conts > .tab_cont');
 tab_cont.hide().eq(0).show();
 tabBtn.on('click',function(e){
   e.preventDefault();
@@ -218,9 +216,11 @@ tabBtn.on('click',function(e){
 		var cur = $(this).attr('datavalue');
 		if($(this).attr('disabled') == 'disabled') return false;
 		if(cur == 'on'){
-			$(this).attr('datavalue','off');
+      $(this).attr('datavalue','off');
+      $(this).children('input').attr('title',"꺼짐");
 		}else{
-				$(this).attr('datavalue','on');
+      $(this).attr('datavalue','on');
+      $(this).children('input').attr('title',"켜짐");
 		}
   })
   

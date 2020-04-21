@@ -24,8 +24,8 @@ function css(){
   .pipe(bs.stream());
 }
 function js(){
-  return gulp.src('dev/js/*.js')
-  .pipe(gulp.dest('dist/js'))
+  return gulp.src('dev/**/*.js')
+  .pipe(gulp.dest('dist/'))
   .pipe(bs.stream());
 }
 function watch(){
@@ -36,7 +36,7 @@ function watch(){
   });
   gulp.watch('dev/**/*.html', inc);
   gulp.watch(['dev/**/*.jpg','dev/**/*.png','dev/**/*.gif'], imgMin);
-  gulp.watch('dev/**/js/*.js', js);
+  gulp.watch('dev/**/*.js', js);
   gulp.watch('dev/**/css/**/*.css', css);
 }
 

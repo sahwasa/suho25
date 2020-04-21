@@ -13,10 +13,10 @@
 .gisAside .btn_toggle[datavalue="on"]::before{content:"\f0d9";}
 .gisAside .tit_logo{display:block;width:100%;height:80px;background-color:#073973;margin:0;padding:12px 0 16px;}
 .gisAside .tit_logo a{background-size: initial;}
-.gisAside .ipt_search{position:relative;background-color:#d9e1ef;padding:16px 14px;}
-.gisAside .ipt_search input{width:100%;height:33px;border-radius:3px;font-size:13px;line-height:33px;}
-.gisAside .ipt_search .axi_search{position:absolute;right:25px;top:50%;margin-top:-15px;}
-.gisAside .ipt_search .axi_search::before{font-size:18px;color:#999;vertical-align:top;}
+.ipt_search{position:relative;background-color:#d9e1ef;padding:16px 14px;}
+.ipt_search input{width:100%;height:33px;border-radius:3px;font-size:13px;line-height:33px;}
+.ipt_search .axi_search{position:absolute;right:25px;top:50%;margin-top:-15px;}
+.ipt_search .axi_search::before{font-size:18px;color:#999;vertical-align:top;}
 .gisAside .list_wrap{height:calc(100% - 210px);}
 .gisAside .list_status{display:flex;flex-direction:row;width:100%;border-bottom: 1px solid #4b77dc;}
 .gisAside .list_status li{flex:1;line-height:44px;}
@@ -78,7 +78,7 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 [streetView="off"] .mapArea{height:100%;}
 [streetView="off"] .streetArea{height:0;}
 
-.pop_areaDtl{position:absolute;left:50%;top:200px;width:310px;text-align:left;background-color:#fff;border:1px solid #b7b7b7;}
+.pop_areaDtl{position:absolute;width:310px;text-align:left;background-color:#fff;}
 .pop_areaDtl .pop_tit{position:relative;border-bottom: 1px solid #ccc;}
 .pop_areaDtl .pop_tit h1{display:block;color:#4a77dc;padding:15px 45px 15px 15px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
 .pop_areaDtl .pop_tit .axi_del{position:absolute;right:12px;top:50%;height:24px;margin-top:-12px;}
@@ -145,10 +145,67 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 /* assign */
 .assign .fixed_info,
 .assign .ipt_info{width:48%;margin-left:2%;}
-.assign .fixed_info{margin-left:0;background-color:#f8f9fb;padding:25px;}
-.assign .fixed_info fieldset{margin-top:25px;}
-.assign .fixed_info fieldset:first-of-type{margin-top:0;}
-/* .assign .fixed_info dt{background-color:;} */
+.assign .fixed_info{margin-left:0;}
+.assign .fixed_info .article{margin-top:10px;}
+.assign .fixed_info .article:first-of-type{margin-top:0;}
+.assign .fixed_info h2{background-color:#f14a4a;color:#fff;padding:5px 15px;border-radius:5px 5px 0 0;}
+.assign .fixed_info .use_grid{border:1px solid #f14a4a;border-top-width:2px;border-radius:0 5px 5px 5px;margin-top:0;padding-bottom:15px;margin-left:0;box-shadow:2px 3px 5px rgba(0,0,0,.2);background-color:#fff;}
+.assign .fixed_info dt{position:relative;}
+.assign .fixed_info dt::before{position:relative;content:"·";font-family:'axicon';color:#949dad;margin-right:3px;font-weight:bold;font-family:'notokrB';}
+.assign .fixed_info dd{overflow: visible;white-space:normal;padding-right:15px;}
+
+.assign .ipt_info{margin-top:28px;}
+.assign .ipt_info .use_grid{overflow:visible;}
+.assign_step{display:flex;margin-bottom:25px;padding:5px 0 10px;border-bottom:1px solid #e2e2e2; box-sizing:border-box;}
+.assign_step li{position:relative;width:21%;color:#4376af;padding:5px 0;border-radius:15px;box-sizing:border-box;text-align:center;background-color:#f3f3f3;margin:0 2%;}
+.assign_step li.on{color:#fff;}
+.assign_step li::before{position:absolute;left:-13%;top:50%;transform: translateY(-50%) rotate(45deg);content:"";width:6px;height:6px;border:2px solid #999;border-width:2px 2px 0 0;}
+.assign_step li:first-child::before{display:none;}
+.assign_step .on:first-child{background-color:#f14a4a;}
+.assign_step .on:nth-child(2),
+.assign .fixed_info .article:nth-of-type(2) h2{background-color:#f87c5b;}
+.assign .fixed_info .article:nth-of-type(2) .use_grid{border-color:#f87c5b;}
+.assign_step .on:nth-child(3),
+.assign .fixed_info .article:nth-of-type(3) h2{background-color:#44b7b5;}
+.assign .fixed_info .article:nth-of-type(3) .use_grid{border-color:#44b7b5;}
+.assign_step .on:nth-child(4),
+.assign .fixed_info .article:nth-of-type(4) h2{background-color:#096ed0;}
+.assign .fixed_info .article:nth-of-type(4) .use_grid{border-color:#096ed0;}
+.ampm{float:right;}
+.ampm label{position:relative;top:1px;display:block;float:left;width:50px;
+  text-align:center;margin-left:5px;padding:2px 0 4px;cursor:pointer;box-sizing:border-box;
+  color: #4a77dc;background-color:#fff;border:1px solid #d2d9e4;}
+.ampm label.on{background-color:#4a77dc;color:#fff;border-color:#4a77dc;}
+.ampm input[type="radio"]{position:absolute;top:0;left:0;z-index:1;width: 100%;height:100%;border:0 none;margin:0;opacity:.01;filter:alpha(opacity=0);
+  cursor: pointer;}
+.dateIpt > input{width:calc(100% - 110px);}
+.btn1Ipt > input{width:calc(100% - 58px);}
+.btn1Ipt > .btn{float:right;margin-top:3px;}
+.search_engineer{position:absolute;left:auto;right:10px;top:80px;width:320px;z-index:100;box-shadow: none;}
+.search_engineer .ipt_search{padding:5px;margin-bottom:10px;}
+.search_engineer .ipt_search .axi_search{right:15px}
+.search_engineer .li_engineer{max-height:175px;overflow-y:auto;border:1px solid #ccc;border-width:1px 0;}
+.li_engineer li{border-top:1px solid #ccc;padding:0;}
+.li_engineer li:first-child{border-top-width:0;}
+.li_engineer li:hover{background-color:#f3f5f9;}
+.li_engineer .on{background-color:#fffec7;}
+.li_engineer label{display:flex;height:100%;padding:5px;margin:0;}
+.li_engineer input[type="radio"]{width:30px;height:auto;box-shadow:none;margin-top:6px;}
+.li_engineer .e_name{width:100px;}
+@media screen and (max-width:668px){
+  .assign{display:block;}
+  .assign .fixed_info,
+  .assign .ipt_info{width:100%;margin-left:0;}
+  .assign .fixed_info .use_grid{flex-direction:row;}
+  .ampm label{top:4px;width:42px;}
+  .dateIpt > input{width:calc(100% - 94px);}
+  .btn1Ipt > input{width:calc(100% - 45px);}
+  .btn1Ipt > .btn{float:right;margin-top:3px;}
+  .search_engineer{position:fixed;top:0;right:0;width:100%;height:100%;}
+  .search_engineer .pop_body{height:calc(100% - 36px);}
+  .search_engineer .list_wrap{height:calc(100% - 106px);}
+  .search_engineer .li_engineer{max-height:none;height:100%;}
+}
 
 /* ios css핵 */
 @supports (-webkit-overflow-scrolling: touch) {

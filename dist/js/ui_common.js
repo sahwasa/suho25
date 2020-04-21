@@ -71,18 +71,19 @@
       e.preventDefault();      
       var selp = $(this);
       (selp.parents('.overlay').length) ?
-      selp.parents('.overlay').hide() : selp.parents('.pop_wrap').hide();
+      selp.parents('.overlay').hide() : selp.parents('.pop_wrap').slideUp();
+      objHtml.css('overflow','auto');
     });
       
-  var rolePopOpen =$("[openpop]");
+  var rolePopOpen =$("[openpop]"),
+      objHtml = $('html');
     rolePopOpen.on('click',function(e){
       e.preventDefault();
 
-      var popOverlay = $('#'+$(this).attr('openpop')),
-          objHtml = $('html');  
+      var popOverlay = $('#'+$(this).attr('openpop'));
       if(popOverlay.css('display') == 'none'){
         objHtml.css('overflow','hidden');
-        popOverlay.show();
+        popOverlay.slideDown(300);
       }else{
         objHtml.css('overflow','auto');
       }
@@ -174,11 +175,7 @@ tabBtn.on('click',function(e){
     var sel = $(this),
         selP = sel.parents('ul');
       addOn(sel);
-      if(sel[0].name === 'mars'){
-        marsEvt(selP)
-      }else{
-        allEvt(selP);
-      }
+      allEvt(selP);
   });
   allBtn.on('change',function(){
     var all = $(this);

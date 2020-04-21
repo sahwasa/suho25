@@ -20,8 +20,10 @@
 .pop_wrap .search{border:1px solid #6a7183;border-width:1px 0;padding:14px 0;margin-bottom:20px;}
 
 /* layer_pop */
-.layer_pop{position:absolute;top:120px;left:50%;border:1px solid #000;box-shadow:0 0 10px #000;}
-.layer_pop .pop_body{max-height:760px;overflow-y:auto;}
+.layer_pop{position:absolute;top:120px;left:50%;border:1px solid #000;box-shadow:0 0 10px #000;background-color:#fff;display:none;}
+.layer_pop .pop_tit .axi_del{position: absolute;right:10px;top:6px;}
+.layer_pop .pop_tit .axi_del::before{font-size:20px;}
+.layer_pop .pop_body{max-height:760px;overflow-y:auto;padding:5px;}
 
 .loading{top:50%;width:400px;height:240px;margin:-120px 0 0 -200px;background-color:#fff;border:2px solid #2d64a7;padding:40px 20px 0;text-align:center;}
 .loading h1{font-size:33px;font-family:'notokrM';margin-bottom:5px;letter-spacing:-1px;}
@@ -39,7 +41,7 @@
 .error_cont p{font-size:13px;line-height:20px;margin-bottom:21px;}
 .error_cont .btn{padding:4px 27px 5px;}
 
-.pop_findAddr{width:500px;margin-left:-250px;}
+.pop_findAddr{width:500px;}
 .pop_findAddr .ex{font-size:0.825em;margin-top:10px;}
 .pop_findAddr .ipt_wrap{position:relative;margin-top:10px;}
 .pop_findAddr .ipt_wrap input{width:calc(100% - 58px);background-color:#fff;}

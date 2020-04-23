@@ -7,6 +7,7 @@
 }
 @media screen and (max-width:1023px){
   /* 태블릿, 아이패드프로 제외 */
+  .wrap{height:auto\0;}
   .m_view{display:block;}
 
   /* box */
@@ -95,6 +96,7 @@
   /* 모바일 */
   body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
   
+  .tit_btn{margin-top:-3px;}
   .btn{padding:3px 8px 4px;}
   .btn_list::before,
   .axi_only::before,
@@ -112,11 +114,15 @@
   .use_grid{flex-direction:column;}
   .use_grid > li{width:100%!important;}
 
+  .li_num li::before{line-height:24px;}
+
   .tab{margin-bottom:10px;}
   .tab_btns .btn{padding:1px 8px 2px;}
   .tabCont_btns{margin-bottom:5px;}
+  .tab_v .tab_conts .tab_cont{padding:10px;}
   
   legend{margin-bottom:10px;}
+
   /* table */
   .tbl_top .clear_flex .btn,
   .tbl_top .flex_top *{min-width:60px;}
@@ -139,7 +145,6 @@
   .section .tit h2{font-size:1em;color:#0d0d0d;letter-spacing:-.05em;}
   .section .tit h3{font-size:0.938em;color:#606060;margin-bottom:30px;}
   .section .tit h3::before{content:"";display:inline-block;width:0;height:20px;border-left:4px solid #999;vertical-align:middle;margin:-4px 10px 0 0;}
-  
 }
 @media screen and (min-aspect-ratio: 1/1) and (max-width:668px){
   /* 모바일 가로모드 */ 
@@ -157,6 +162,7 @@
   select,
   textarea{-webkit-appearance:none;border-radius:0;}
   input[type="radio"]{-webkit-appearance:radio;}
+  .color_list input[type="radio"]{-webkit-appearance:none;}
   select{padding:1px 5px 2px;}
   .tbl_scroll{height:auto;}
   .fix_scroll{width:0;}

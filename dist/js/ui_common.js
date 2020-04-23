@@ -9,23 +9,23 @@
   delay = 300,
   mobileSize = 768;
   header.on({
-  'mouseenter': function(){
-    if(header.hasClass(full_lnb) || $(window).outerWidth() <= mobileSize){
-      lnb.css('height','100%');
-      return;
-  }
-  timer = setTimeout(function() {    
-      lnb.animate({"height":openSubH});        
-    }, delay)
-  },
-  'mouseleave': function(){
-    if(header.hasClass(full_lnb) || $(window).outerWidth() <= mobileSize){
-      lnb.css('height', closeSubH);
-      return;
-    } 
-  clearTimeout(timer);
-    lnb.stop();
-    lnb.animate({"height":closeSubH});
+    'mouseenter': function(){
+      if(header.hasClass(full_lnb) || $(window).outerWidth() <= mobileSize){
+        lnb.css('height','100%');
+        return;
+      }
+      timer = setTimeout(function() {    
+          lnb.animate({"height":openSubH});        
+      }, delay)
+    },
+    'mouseleave': function(){
+      if(header.hasClass(full_lnb) || $(window).outerWidth() <= mobileSize){
+        lnb.css('height', closeSubH);
+        return;
+      } 
+      clearTimeout(timer);
+      lnb.stop();
+      lnb.animate({"height":closeSubH});
     }
   });
 
@@ -42,7 +42,7 @@
     },
     'mouseleave' : function(){
       myInfoLayer.removeClass('open');
-    },
+    },    
     'focusout' : function(){
       myInfoLayer.removeClass('open');
     }
@@ -59,33 +59,35 @@
 	/* layer_popup */
   var modal= $( "[dataformat='modal']" ),
       layer_pop = $(".pop_wrap");
-	  modal.draggable({
-      handle: ".pop_header",
-      cursor: "move",
-      containment: "parent",
-      scroll:false
-    });
-	  layer_pop.find("[role='btn_close']").on('click',function(e){
-      e.preventDefault();      
-      var selp = $(this);
-      (selp.parents('.overlay').length) ?
-      selp.parents('.overlay').hide() : selp.parents('.pop_wrap').slideUp();
-      objHtml.css('overflow','auto');
-    });
+  modal.draggable({
+    handle: ".pop_header",
+    cursor: "move",
+    containment: "parent",
+    scroll:false
+  });
+  layer_pop.find("[role='btn_close']").on('click',function(e){
+    e.preventDefault();      
+    var selp = $(this);
+    (selp.parents('.overlay').length) ?
+    selp.parents('.overlay').hide() : selp.parents('.pop_wrap').slideUp();
+    selp.parents('.pop_wrap').css({left:'50%',top:'120px'});
+    objHtml.css('overflow','auto');
+  });
       
   var rolePopOpen =$("[openpop]"),
       objHtml = $('html');
-    rolePopOpen.on('click',function(e){
-      e.preventDefault();
+  rolePopOpen.on('click',function(e){
+    e.preventDefault();
+    var popOverlay = $('#'+$(this).attr('openpop'));
+    if(popOverlay.css('display') == 'none'){
+      objHtml.css('overflow','hidden');
+      popOverlay.slideDown(300);
+    }else{
+      objHtml.css('overflow','auto');
+    }
+    popOverlay.attr('tabindex',-1).focus();
+  });
 
-      var popOverlay = $('#'+$(this).attr('openpop'));
-      if(popOverlay.css('display') == 'none'){
-        objHtml.css('overflow','hidden');
-        popOverlay.slideDown(300);
-      }else{
-        objHtml.css('overflow','auto');
-      }
-    });
   /* fileDeco */
   function fileNameInput(){
     var fName=$('#file').val().split('\\');
@@ -93,51 +95,51 @@
   }
 
   /*calendar*/
-  $.datepicker.setDefaults({
-    buttonImageOnly: true,
-    showOn: "both",
-    buttonImage: "../img/btn_calendar.gif",
-    changeMonth: true,
-    changeYear: true,
-    numberOfMonths: 1,
-    regional : ["ko"],
-    dateFormat : "yy-mm-dd"
-  });
-  $( "[dataformat='datepic']" ).datepicker({
-      buttonText: "날짜를 선택해주세요."
-    });
-  var from = $( "[dataformat='from']" ).datepicker({
-    buttonText: "시작날짜를 선택해주세요.",
-    onClose: function( selectedDate ) {
-      var getName=$(this).attr('name');
-      $("input[name='"+ getName +"'].to").datepicker( "option", "minDate", selectedDate );
-    }  
-  });
-  var to = $( "[dataformat='to']" ).datepicker({
-    buttonText: "종료날짜를 선택해주세요.",
-    onClose: function( selectedDate ) {
-      var getName=$(this).attr('name');
-      $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
-    }
-	});
-	function date_to_str(format){
-    var year = format.getFullYear(),
-        month = format.getMonth() + 1,
-        date = format.getDate(),
-        hour = format.getHours(),
-        min = format.getMinutes(),
-        sec = format.getSeconds(),
-        ampm = (hour >= 12) ? '오후' : '오전';
-    if(month<10) month = '0' + month;
-    if(date<10) date = '0' + date;
-    hour = hour % 12;
-    hour = hour ? hour : 12;
-    if(hour<10) hour = '0' + hour;
-    min = min < 10 ? '0'+min : min;
-    sec = sec < 10 ? '0'+sec : sec;
+  // $.datepicker.setDefaults({
+  //   buttonImageOnly: true,
+  //   showOn: "both",
+  //   buttonImage: "../img/btn_calendar.gif",
+  //   changeMonth: true,
+  //   changeYear: true,
+  //   numberOfMonths: 1,
+  //   regional : ["ko"],
+  //   dateFormat : "yy-mm-dd"
+  // });
+  // $( "[dataformat='datepic']" ).datepicker({
+  //     buttonText: "날짜를 선택해주세요."
+  //   });
+  // var from = $( "[dataformat='from']" ).datepicker({
+  //   buttonText: "시작날짜를 선택해주세요.",
+  //   onClose: function( selectedDate ) {
+  //     var getName=$(this).attr('name');
+  //     $("input[name='"+ getName +"'].to").datepicker( "option", "minDate", selectedDate );
+  //   }  
+  // });
+  // var to = $( "[dataformat='to']" ).datepicker({
+  //   buttonText: "종료날짜를 선택해주세요.",
+  //   onClose: function( selectedDate ) {
+  //     var getName=$(this).attr('name');
+  //     $("input[name='"+ getName +"'].from").datepicker( "option", "maxDate", selectedDate );
+  //   }
+	// });
+	// function date_to_str(format){
+  //   var year = format.getFullYear(),
+  //       month = format.getMonth() + 1,
+  //       date = format.getDate(),
+  //       hour = format.getHours(),
+  //       min = format.getMinutes(),
+  //       sec = format.getSeconds(),
+  //       ampm = (hour >= 12) ? '오후' : '오전';
+  //   if(month<10) month = '0' + month;
+  //   if(date<10) date = '0' + date;
+  //   hour = hour % 12;
+  //   hour = hour ? hour : 12;
+  //   if(hour<10) hour = '0' + hour;
+  //   min = min < 10 ? '0'+min : min;
+  //   sec = sec < 10 ? '0'+sec : sec;
 
-    return year + "-" + month + "-" + date + " " + ampm + " " + hour + ":" + min + ":" + sec;
-	}
+  //   return year + "-" + month + "-" + date + " " + ampm + " " + hour + ":" + min + ":" + sec;
+	// }
 	// $('[dataformat="datetimepic"]').val( date_to_str(new Date()));
 	// use jqueryui-timepicker-addon
   // https://trentrichardson.com/examples/timepicker/

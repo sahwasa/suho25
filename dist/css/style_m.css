@@ -95,6 +95,8 @@
 @media screen and (max-width:668px){
   /* 모바일 */
   body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
+
+  .p_view{display:none!important;}
   
   .tit_btn{margin-top:-3px;}
   .btn{padding:3px 8px 4px;}

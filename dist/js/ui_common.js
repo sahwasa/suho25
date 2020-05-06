@@ -231,3 +231,9 @@ tblTabIdx.each(function(i, el){
   var item = $(this);
   item.prop('tabindex',0);
 })
+
+$('.btn_top').on('click',function(e){  
+  e.preventDefault();
+  alert('dd');
+  $('html, body').animate({scrollTop: '0'}, 500);
+})

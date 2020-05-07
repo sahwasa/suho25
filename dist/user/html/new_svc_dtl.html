@@ -304,9 +304,9 @@ var slideWrap = $('.slideWrap'),
     return currentIdx;
   }
   function prevSlide(cur){
-    var prevIdx = cur;
-    console.log(slideItmL, maxIdx);
-    (prevIdx <= 0) ? prevIdx = slideItmL - 1 : prevIdx = cur - 1;
+    var prevIdx = cur, maxIdx;
+    (slideItmL <= maxItm) ? maxIdx = 0 : maxIdx = slideItmL % (maxItm + 1);
+    (prevIdx <= 0) ? prevIdx = maxIdx : prevIdx = cur - 1;
     slideCont.animate({left : - slideWrap.width() * prevIdx}, aniT);
     currentIdx = prevIdx;
     return currentIdx;

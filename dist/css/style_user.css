@@ -96,13 +96,24 @@
 @media screen and (max-width:668px){
   .svc_item{width:100%}
 }
-.new_svcWrap{display:flex;}
+.new_svcWrap{display:flex;justify-content: space-between;}
 .product_img,
 .svc_joinInfo{flex:1;}
-.product_img ul{display:flex;flex-wrap:wrap;justify-content:space-between;align-items: flex-start;align-content:flex-start;}
-.product_img li{flex:0 1 49%;margin-bottom:2%;overflow:hidden;}
-.product_img li img{width:100%;height:auto;}
-.svc_joinInfo{width:700px;margin-left:50px;}
+.product_img{max-width:650px;}
+.product_img .active_img{width:100%;height:auto;border:1px solid #d7d7d7;box-sizing:border-box;margin-bottom:20px;text-align:center;}
+.product_img .active_img img{width:100%;height:auto;}
+.product_slide{position:relative;padding:0 45px;}
+.product_slide .slideWrap{position:relative;width:100%;box-sizing:border-box;overflow:hidden;}
+.product_thumbs{position:absolute;left:0;top:0;}
+.product_thumbs li{float:left;margin:0 5px;overflow:hidden;border:1px solid #d7d7d7;box-sizing:border-box;}
+.product_thumbs li img{width:100%;height:auto;border:1px solid transparent;box-sizing:border-box;}
+.product_thumbs .on,
+.product_thumbs .on img{border-color:#000;}
+.slide_remote .btn_remote{position:absolute;top:47%;font-size:0;border:2px solid #000;width:30px;height:30px;transform: translateY(-50%) rotate(45deg);}
+.slide_remote .btn_prev{left:5px;border-width:0 0 2px 2px;}
+.slide_remote .btn_next{right:5px;border-width:2px 2px 0 0;}
+
+.svc_joinInfo{max-width:800px;margin-left:50px;}
 .svc_joinInfo .svc_name h2{font-size:22px;font-family:'notokrM';}
 .svc_joinInfo .section{display:flex;border-top:1px solid #d2d9e4;padding-top:20px;margin-top:10px;justify-content: flex-start;}
 .svc_joinInfo h3{margin-bottom:15px;width:150px;margin-right:20px;}
@@ -131,15 +142,14 @@
 .color_list input[type="radio"]:checked{border-color:#333;}
 .color_list input[type="radio"]:checked+label{display:inline-block;}
 @media screen and (max-width:1280px){
-  .product_img li:first-child{flex:1 100%}
+  /* .product_img .active_img{height:300px;} */
   .svc_joinInfo{margin-left:30px;}
   .svc_joinInfo h3{width:100px;margin-right:0;}
   .svc_joinInfo dt{width:70px;}
   .svc_joinInfo dd{width:calc(100% - 70px);}
 }
 @media screen and (max-width:1023px){
-  .product_img li{flex:0 1 32%;}
-  .product_img li{flex:0 1 49%;}
+  /* .product_img .active_img{height:300px;} */
   .svc_joinInfo h3{width:100%;}
   .svc_joinInfo .section{flex-direction:column;}
   .svc_joinInfo .section.btn_wrap{flex-direction:row;}

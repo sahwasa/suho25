@@ -264,14 +264,16 @@
   .list_workflow li > div{padding:0 30px 150px;}
 }
 
-/* login */
-.login{display:flex;width:100%;align-items:center;justify-content:center;flex-direction:column;padding:30px 0;}
+/* login, join */
+.login,
+.join{display:flex;width:100%;align-items:center;justify-content:center;flex-direction:column;padding:30px 0;}
 .box_login{width:889px;height:524px;background: url(../img/main/bg_login.jpg) 0 0 no-repeat;padding-left:431px;box-sizing:border-box;}
 .box_login .ipt_wrap{display:inline-block;border:1px solid #d7d7d7;box-sizing:border-box;width:458px;height:100%;text-align:center;padding:40px 50px;background-color:#fff;}
 .logo_c{display:inline-block;width:147px;height:57px;background:url(../img/logo_c.png) 0 0 no-repeat;font-size:0;line-height:0;}
 .logo_c a{font-size:0;}
 .box_login .logo_c{margin-bottom:30px;}
 .box_login .ipt_wrap input[type="text"],
+.box_login .ipt_wrap input[type="email"],
 .box_login .ipt_wrap input[type="password"]{width:100%;border:none;border-bottom:1px solid #d7d7d7;line-height:50px;margin-top:20px;background:transparent;}
 .login input::-webkit-input-placeholder,
 .login input::-moz-input-placeholder,
@@ -281,12 +283,40 @@
 .login input:focus::-webkit-input-placeholder{color:#999;}
 .login .btn_login{width:100%;background-color:#145385;color:#fff;line-height:50px;;}
 .box_login label{display:block;width:100%;text-align:left;margin:15px 0 40px;}
-.login_footer{width:100%;margin-top:80px;text-align:center;}
-.login_footer .footer_list li{position:relative;}
-.login_footer .footer_list a{color:#333;}
-.login_footer .footer_list a::before{background:#555;border-left: 1px solid #fafbfc;}
-.login_footer p{font-size:13px;margin-top:10px;}
-.login_footer div{font-size:13px;margin-top:30px;}
+.cmmn_footer{width:100%;margin-top:80px;text-align:center;}
+.cmmn_footer .footer_list li{position:relative;}
+.cmmn_footer .footer_list a{color:#333;}
+.cmmn_footer .footer_list a::before{background:#555;border-left: 1px solid #fafbfc;}
+.cmmn_footer p{font-size:13px;margin-top:10px;}
+.cmmn_footer div{font-size:13px;margin-top:30px;}
+
+/* join */
+.join{justify-content:flex-start;padding:50px 0 30px;}
+.box_join{width:582px;padding:50px;border:1px solid #d7d7d7;box-sizing:border-box;margin-top:40px;}
+.box_join h2{font-size:22px;word-break:keep-all;}
+.box_join .cirCheck{position:relative;padding-left:30px;display:block;}
+.box_join .cirCheck input{position:absolute;left:0;top:4px;}
+.box_join .section{margin-top:40px;font-size:14px;}
+.box_join .box_grayLine{height:120px;border-width:1px;border-color:#d7d7d7;margin-top:10px;font-size:13px;overflow-y:scroll;background-color:#fff;}
+.box_join .btn_area{display:flex;margin-top:40px;justify-content:space-between;}
+.box_join .btn_area .btn{flex:1;width:100%;line-height:50px;margin-left:9px;padding:0;}
+.box_join .btn_area .btn:first-of-type{margin-left:0;}
+.join_ipt{overflow:hidden;}
+.join_ipt dd{margin-bottom:30px;}
+.join_ipt label{font-size:14px;}
+.join_ipt input{width:100%;font-size:16px;border-width:0 0 1px;border-color:#d7d7d7;line-height:40px;}
+.join_ipt input::-webkit-input-placeholder,
+.join_ipt input::-moz-input-placeholder,
+.join_ipt input::-ms-input-placeholder,
+.join_ipt input::placeholder{color:#999;}
+.join_ipt input::-webkit-input-placeholder,
+.join_ipt input:focus::-webkit-input-placeholder{color:#999;}
+.info_warn{display:block;margin-top:10px;color:#d24545;font-size:14px;}
+.info_warn::before{position:relative;top:1px;content:"\e730";font-family:'axicon';color:#ffab00;font-size:16px;margin-right:5px;}
+.go_login{font-size:14px;margin-top:25px;}
+.go_login:hover{text-decoration:underline;}
+
+.box_join .finished{text-align: center;}
 
 @media screen and (max-aspect-ratio: 1/1) and (max-width:1023px) {
   .login{height:100vh;padding:0;background:#fafafa;}
@@ -296,9 +326,12 @@
   .login{height:100vh;padding:0;background:#fafafa;}
   .box_login{width:100%;height:auto;background:none;padding-left:0;text-align:center;}
   .box_login .ipt_wrap{width:100%;background:transparent;border:none;}
-  .login_footer{margin:0;border-top:1px solid #ccc;padding:15px 0;}
+  .cmmn_footer{margin:0;border-top:1px solid #ccc;padding:15px 0;}
+  .join{padding:30px 0;background:#fafafa;}
+  .box_join{width:100%;padding:20px;border:none;margin-top:20px;}
+  .box_join h2{font-size:20px;border-left:4px solid #145385;padding-left:22px;}
 }
 @media screen and (min-aspect-ratio: 1/1) and (max-width:668px){
   .login{height:100%;}
-  .login_footer{margin:0 0 30px;}
+  .cmmn_footer{margin:0 0 30px;}
 }

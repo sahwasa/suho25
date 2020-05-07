@@ -66,14 +66,21 @@
     <div class="content_body">
       <div class="article new_svcWrap">
         <div class="product_img">
-          <ul>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-            <li><img src="http://placehold.it/600x400" alt=""></li>
-          </ul>
+          <div class="active_img">
+          </div>
+          <div class="product_slide">
+            <div class="slideWrap">
+              <ul class="product_thumbs slide_items">
+                <li><a href="#"><img src="../img/newSvc_item01_1.jpg" alt="큐리안(화이트) 사면"></a></li>
+                <li><a href=""><img src="../img/newSvc_item01_2.jpg" alt="큐리안(화이트) 정면"></a></li>
+                <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 설치예시"></a></li>
+              </ul>
+            </div>
+            <div class="slide_remote">
+              <button type="button" class="btn_remote btn_prev">이전</button>
+              <button type="button" class="btn_remote btn_next">다음</button>
+            </div>
+          </div>
         </div>
         <div class="svc_joinInfo">
           <div class="svc_name">
@@ -241,4 +248,68 @@
 </html>
 <script src="../../js/ui_common.js"></script>
 <script>
+//썸네일 클릭이벤트
+var thumbs = $('.product_thumbs li'),
+    thumbsF = $('.product_thumbs li:first'),
+    act = $('.active_img');
+
+thumbsF.addClass('on');
+act.append('<img src="' + thumbsF.find('img').prop('src') + '" alt="'+ thumbsF.find('img').prop('alt') + '" >');
+thumbs.on('click','a',function(e){
+  e.preventDefault();
+  var actItem = {
+    src : $(this).find('img').prop('src'),
+    alt : $(this).find('img').prop('alt'),
+  }
+  thumbs.removeClass('on');
+  $(this).parent('li').addClass('on');
+  act.find('img').prop('src', actItem.src).prop('alt', actItem.alt);
+})
+
+// 제품 슬라이드
+var slideWrap = $('.slideWrap'),
+    slideCont = $('.slide_items'),
+    slideItm = $('.slide_items > li'),    
+    slideItmL = slideItm.length,
+    maxItm = 3,
+    aniT = 500,
+    currentIdx = 0;
+
+  slideInit();
+  $(window).on('resize',function(){
+    slideInit();
+  });
+  function slideInit(){
+    wrapW = (slideWrap.width() - 30) / maxItm;
+    slideItm.css('width', wrapW);
+    var slideItmSize = {
+      width : Math.ceil(slideItm.outerWidth(true)),
+      height : slideItm.outerHeight(true)
+    };
+    slideCont.width(slideItmSize.width * slideItmL);
+    slideWrap.height(slideItmSize.height);
+  }
+  $('.btn_remote').on('click',function(){
+    var btnCheck = $(this).hasClass('btn_next');
+    cur = currentIdx;
+    (btnCheck) ? nextSlide(cur) : prevSlide(cur);
+  });
+  function nextSlide(cur){
+    var nextIdx = cur + 1 , maxIdx;
+    (slideItmL <= maxItm) ? maxIdx = slideItmL % maxItm : maxIdx = slideItmL % (maxItm + 1);
+
+    if(nextIdx > maxIdx) nextIdx = 0;
+    slideCont.animate({left : -slideWrap.width() * nextIdx}, aniT);
+    currentIdx = nextIdx;
+    return currentIdx;
+  }
+  function prevSlide(cur){
+    var prevIdx = cur;
+    console.log(slideItmL, maxIdx);
+    (prevIdx <= 0) ? prevIdx = slideItmL - 1 : prevIdx = cur - 1;
+    slideCont.animate({left : - slideWrap.width() * prevIdx}, aniT);
+    currentIdx = prevIdx;
+    return currentIdx;
+  }
 </script>
+</html>

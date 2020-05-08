@@ -319,9 +319,9 @@
     (expect.offset().top < curY + winH / 1.5) ? expect.addClass('expect-animate') : expect.removeClass('expect-animate');
 
     for (var prop in items){
-      // console.log(curY, prop, items[prop]);
       var winH = winH;
-      (items[prop] <= curY + winH) ?
+      // console.log(items[prop], curY, winH, curY + winH);
+      (items[prop] <= curY + winH + 200 ) ?
       workflowItem.eq(prop).addClass('on') :
       workflowItem.eq(prop).removeClass('on');
     }

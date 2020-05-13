@@ -62,7 +62,7 @@ audio::-webkit-media-controls-panel,
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-current-time-display, 
 audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
-.btn_notify{position:absolute;right:15px;top:15px;background:url(../img/btn_ico.png) 3px 4px no-repeat, #fff;font-size:11px;padding:0 4px 0 24px;line-height:20px;border-radius:3px;border:1px solid #d2d9e4;box-sizing:border-box;}
+.btn_notify{position:absolute;right:15px;top:17px;background:url(../img/btn_ico.png) 2px 4px no-repeat, #fff;font-size:11px;padding:0 3px 0 22px;line-height:20px;border-radius:3px;border:1px solid #d2d9e4;box-sizing:border-box;}
 .gisAside .item_btn{display:flex;justify-content:space-between;}
 .gisAside .item_btn .btn_statement{margin-left:5px;}
 .gisAside .item_btn .btn_statement:first-of-type{margin-left:0;}

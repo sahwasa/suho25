@@ -26,7 +26,7 @@
 .gisAside .list_status span::before{content:"(";}
 .gisAside .list_status span::after{content:")";}
 .gisAside .list_area{height:calc(100% - 45px);overflow-y:auto;}
-.gisAside .list_items li{border-bottom:1px solid #e2e2e2;text-align:left;padding:15px;cursor:pointer;}
+.gisAside .list_items li{position:relative;border-bottom:1px solid #e2e2e2;text-align:left;padding:15px;cursor:pointer;}
 .gisAside .list_items li:hover{background-color:#f3f5f9;}
 .gisAside .list_items li.on{background-color:#fcf8e3;border-color:#faebcc;}
 .gisAside .list_items li.on dt{color:#433318;}
@@ -62,14 +62,20 @@ audio::-webkit-media-controls-panel,
 audio::-webkit-media-controls-play-button,
 audio::-webkit-media-controls-current-time-display, 
 audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
+.btn_notify{position:absolute;right:15px;top:15px;background:url(../img/btn_ico.png) 3px 4px no-repeat, #fff;font-size:11px;padding:0 4px 0 24px;line-height:20px;border-radius:3px;border:1px solid #d2d9e4;box-sizing:border-box;}
+.gisAside .item_btn{display:flex;justify-content:space-between;}
+.gisAside .item_btn .btn_statement{margin-left:5px;}
+.gisAside .item_btn .btn_statement:first-of-type{margin-left:0;}
 .gisAside .btn_refresh,
 .gisAside .btn_statement{font-size:11px;line-height:22px;box-sizing:border-box;}
 .gisAside .btn_refresh{float:right;width:50px;background-color:#fff;border:1px solid #d2d9e4;color:#4a77dc;}
 .gisAside .btn_statement{display:block;width:100%;font-size:13px;background-color:#3b5998;color:#fff;margin-top:10px;box-shadow:0 1px 1px rgba(0,0,0,.4);border-radius:3px;letter-spacing:0;}
 .gisAside .btn_statement:hover{box-shadow:2px 2px 3px rgba(0,0,0,.4) inset;}
-.gisAside .processing .btn_statement{background-color:#f14a4a;}
-.gisAside .receipt .btn_statement{background-color:#3b5998;}
-.gisAside .completion .btn_statement{background-color:#797979;}
+.gisAside .btn_statement.bg_red{background-color:#f14a4a;}
+.gisAside .btn_statement.bg_blue{background-color:#3b5998;}
+.gisAside .btn_statement.bg_orange{background-color:#f99441;}
+.gisAside .btn_statement.bg_green{background-color:#3b9413;}
+.gisAside .btn_statement.bg_gray{background-color:#797979;}
 .monitoring .gisArea{position:relative;height:100%;background:#ccc;overflow: hidden;}
 .monitoring .gisArea .mapArea,
 .monitoring .gisArea .streetArea{width:100%;transition:height .5s;box-sizing:border-box;}

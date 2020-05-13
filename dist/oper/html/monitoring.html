@@ -52,7 +52,6 @@
               <div class="item_date">
                 <sapn class="tag">처리중</sapn>
                 <span>2020.12.31 12:34:56</span>
-                <button type="button" class="btn btn_red" style="margin-left: 2px;" onclick="">신고</button>
               </div>
               <dl class="item_info">
                 <dt>주소</dt>
@@ -66,7 +65,56 @@
                   <div class="progress"></div><button type="button" class="btn_refresh">새로고침</button>
                 </dd>
               </dl>
-              <button type="button" class="btn_statement" disabled>처리중</button>
+              <div class="item_btn">
+                <button type="button" class="btn_statement bg_red" disabled>출동</button>
+                <button type="button" class="btn_statement bg_blue" disabled>결과입력</button>
+                <button type="button" class="btn_notify" onclick="">신고</button>
+              </div>
+          </li>
+          <li class="on processing" tabindex="0">
+              <div class="item_date">
+                <sapn class="tag">처리중</sapn>
+                <span>2020.12.31 12:34:56</span>
+              </div>
+              <dl class="item_info">
+                <dt>주소</dt>
+                <dd>이천시 부평구 부개동</dd>
+                <dt>상호</dt>
+                <dd>길동 천국 1호점</dd>
+                <dt>이름</dt>
+                <dd>홍길동 010-1234-5678</dd>
+                <dt>녹취</dt>
+                <dd>
+                  <div class="progress"></div><button type="button" class="btn_refresh">새로고침</button>
+                </dd>
+              </dl>
+              <div class="item_btn">
+                <button type="button" class="btn_statement bg_gray" disabled>출동취소</button>
+                <button type="button" class="btn_statement bg_blue" disabled>결과입력</button>
+                <button type="button" class="btn_notify" onclick="">신고</button>
+              </div>
+          </li>
+          <li class="processing" tabindex="0">
+              <div class="item_date">
+                <sapn class="tag">처리중</sapn>
+                <span>2020.12.31 12:34:56</span>
+              </div>
+              <dl class="item_info">
+                <dt>주소</dt>
+                <dd>이천시 부평구 부개동</dd>
+                <dt>상호</dt>
+                <dd>길동 천국 1호점</dd>
+                <dt>이름</dt>
+                <dd>홍길동 010-1234-5678</dd>
+                <dt>녹취</dt>
+                <dd>
+                  <div class="progress"></div><button type="button" class="btn_refresh">새로고침</button>
+                </dd>
+              </dl>
+              <div class="item_btn">
+                <button type="button" class="btn_statement bg_green" disabled>처리중</button>
+                <button type="button" class="btn_notify" onclick="">신고</button>
+              </div>
           </li>
           <li tabindex="0" class="receipt">
             <div class="item_date">
@@ -89,7 +137,10 @@
                   </audio>
                 </div>
             </dl>
-            <button type="button" class="btn_statement">처리입력</button>
+            <div class="item_btn">
+              <button type="button" class="btn_statement bg_orange" disabled>처리입력</button>
+              <button type="button" class="btn_notify" onclick="">신고</button>
+            </div>
           </li>
           <li tabindex="0" class="completion">
             <div class="item_date">
@@ -113,7 +164,10 @@
                 </div>
               </dd>
             </dl>
-            <button type="button" class="btn_statement">처리결과</button>
+            <div class="item_btn">
+              <button type="button" class="btn_statement bg_gray" disabled>처리입력</button>
+              <button type="button" class="btn_notify" onclick="">신고</button>
+            </div>
           </li>
         </ul>
       </div>

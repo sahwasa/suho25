@@ -74,10 +74,6 @@
                 <li><a href="#"><img src="../img/newSvc_item01_1.jpg" alt="큐리안(화이트) 사면"></a></li>
                 <li><a href=""><img src="../img/newSvc_item01_2.jpg" alt="큐리안(화이트) 정면"></a></li>
                 <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 정면"></a></li>
-                <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 정면"></a></li>
-                <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 정면"></a></li>
-                <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 정면"></a></li>
-                <li><a href=""><img src="../img/newSvc_item01_3.jpg" alt="큐리안(화이트) 정면"></a></li>
               </ul>
             </div>
             <div class="slide_remote">
@@ -301,12 +297,6 @@ var slideWrap = $('.slideWrap'),
   function nextSlide(cur){
     var nextIdx = cur + 1 , maxIdx;
     (slideItmL <= maxItm) ? maxIdx = 0 : maxIdx = slideItmL / maxItm;
-
-    console.log('slideItmL',slideItmL);
-    console.log('maxItm',maxItm);
-    console.log('maxIdx',maxIdx);
-    console.log('nextIdx',nextIdx);
-
     if(nextIdx >= maxIdx) nextIdx = 0;
     slideCont.animate({left : -slideWrap.width() * nextIdx}, aniT);
     currentIdx = nextIdx;
@@ -314,7 +304,10 @@ var slideWrap = $('.slideWrap'),
   }
   function prevSlide(cur){
     var prevIdx = cur, maxIdx;
-    (slideItmL <= maxItm) ? maxIdx = 0 : maxIdx = slideItmL % (maxItm + 1);
+    (slideItmL <= maxItm) ? maxIdx = 0 : maxIdx = Math.ceil((slideItmL / maxItm) - 1);
+
+    console.log('maxIdx',maxIdx);
+
     (prevIdx <= 0) ? prevIdx = maxIdx : prevIdx = cur - 1;
     slideCont.animate({left : - slideWrap.width() * prevIdx}, aniT);
     currentIdx = prevIdx;

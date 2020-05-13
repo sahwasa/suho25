@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title>수호25 운영자</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="../../img/favicon.png">
+    <link rel="stylesheet" href="../../plugins/axicon/axicon.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/pop.css" rel="stylesheet">
+    <link href="../../css/style_oper.css" rel="stylesheet">
+    <link href="../../css/style_m.css" rel="stylesheet">
+    <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5core/dist/ax5core.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5ui-toast/dist/ax5toast.min.js"></script>
+  </head>
+  <body>
+<!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#nav">주메뉴 바로가기</a>
+</div>
+<hr class="access_divide" />
+<!-- 바로가기 메뉴__e -->
+<div class="wrap">
+  <div id="nav" class="aside">
+  <h1 class="tit_logo"><a href="" title="메인">SUHO25-TOP SAFETY</a></h1>
+  <div class="my_infoArea clearfix" myInfo>
+    <b>홍길동</b>
+    <span class="btn_wrap fr" myInfoLayer>
+      <button type="button" class="btn btn_s" myInfoIpt>내정보</button>
+      <button type="button" class="btn btn_s">로그아웃</button>
+    </span>
+    <div class="my_infoDtl">
+      <form>        
+        <ul class="my_info">
+          <li class="info_id">abcdefghight@gmail.com</li>
+          <li class="info_phone">010-1234-5678</li>
+          <li class="info_name"><input type="text" placeholder="이름" /></li>
+          <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
+          <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
+        </ul>
+        <div class="btnArea">
+          <button type="button" class="btn btn_red">저장</button>
+          <button type="button" class="btn btn_gray" myIptClose>취소</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="util m_view">
+    <button class="btn_navToggle" toggle_nav><span class="ico">메뉴</span></button>
+  </div>
+  <ul class="gnb" role="navigation">
+    <li><a href="/oper/html/monitoring.html" title="새창열림" target="_blank">모니터링 <i class="axi_only axi_newOpen">새창열림</i></a></li>
+    <li class="on"><a href="/oper/html/svc_info.html">서비스정보</a>
+      <ul class="sub">
+        <li class="on"><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/product_list.html">제품정보</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/svc_status.html">서비스 이용현황</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/assign.html">설치기사배정</a></li>
+    <li><a href="/oper/html/assign.html">제품설치대기</a></li>
+  </ul>
+  <div class="footer">
+    &copy; SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+  <div id="content" class="content">
+    <div class="content_tit">
+      <h1>제품정보</h1>
+    </div>
+    <div class="content_body">
+      <div class="ipt_maxWidth">
+        <div class="tbl_top alignR">
+          <a href="svc_info.html" class="btn btn_white">목록</a>
+          <span class="divideL">
+            <button type="button" class="btn btn_red">저장</button>
+            <button type="button" class="btn btn_blue">수정</button>
+            <button type="button" class="btn btn_gray">삭제</button>
+          </span>
+        </div>
+        <form class="ipt_form">
+          <ul class="use_grid divide12 fullIpt">
+            <li class="w6">
+              <label for="prductCode" class="required">제품코드</label>
+              <input type="text" id="prductCode" readonly value="CB78755512A" />
+            </li>
+            <li class="w6">
+              <label for="prductNm" class="required">제품명</label>
+              <input type="text" id="prductNm" readonly value="큐리안" />
+            </li>
+            <li class="w6">
+              <label for="prductTy">제품형태</label>
+              <select name="" id="prductTy" readonly>
+                <option value="">거치형</option>
+              </select>
+            </li>
+            <li class="w6">
+              <label for="prductColor">제품컬러</label>
+              <select name="" id="prductColor" readonly>
+                <option value="">블랙</option>
+              </select>
+            </li>
+            <li class="w6">
+              <label for="prductInvntryAt">재고여부</label>
+              <select name="" id="prductInvntryAt" readonly>
+                <option value="">재고있음</option>
+              </select>
+            </li>
+            <li class="w12">
+              <label for="prductDc">제품설명</label>
+              <textarea name="" id="prductDc" cols="30" rows="3" readonly>탁상형 제품으로 음성인식 및 터치 알림 기능을 제공한다.</textarea>
+            </li>
+            <li class="w12">
+              <div class="section">
+                <h2>제품 이미지</h2>
+                <ul class="productImg_list">                  
+                  <li>
+                    <a href="javascript:;" id="img_id_0" class="imgs_wrap prductImgFile0">
+                      <img src="https://s.pstatic.net/static/www/mobile/edit/2020/0511/mobile_210508416269.png" alt="">
+                    </a>
+                    <button type="button" class="axi_only axi_del"  onclick="deleteImageAction(0)" >이미지 삭제</button>
+                    <input type="file" id="prductImgFile0" name="prductImgMuliFile" class="blind" />
+                  </li>
+                  <li>
+                    <a href="javascript:;" onclick="fileUploadAction(1);" id="img_id_1" class="imgs_wrap prductImgFile1">
+                      이미지 업로드
+                    </a>
+                    <button type="button" class="axi_only axi_del"  onclick="deleteImageAction(1)" >이미지 삭제</button>
+                    <input type="file" id="prductImgFile1" name="prductImgMuliFile" class="blind" />
+                  </li>
+                  <li>
+                    <a href="javascript:;" onclick="fileUploadAction(2);" id="img_id_2" class="imgs_wrap prductImgFile2">
+                      이미지 업로드
+                    </a>
+                    <input type="file" id="prductImgFile2" name="prductImgMuliFile" class="blind" />
+                  </li>
+                  <li>
+                    <a href="javascript:;" onclick="fileUploadAction(3);" id="img_id_3" class="imgs_wrap prductImgFile3">
+                      이미지 업로드
+                    </a>
+                    <input type="file" id="prductImgFile3" name="prductImgMuliFile" class="blind" />
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </form>       
+      </div>
+    </div>
+  </div>
+  <div class="m_footer m_view">
+    &copy; SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+
+<a href="#" class="btn_top" title="맨위로">맨위로</a>
+</body>
+<script src="../../js/ui_common.js"></script>
+
+
+<script>
+  
+$( document ).ready(function() {
+	var result = '';
+	if(typeof reuslt  != 'undefined' ) alert("저장되었습니다.");
+	
+	if($("#mappingTy").val() == "DETAIL"){
+		$(".prduct").attr( 'disabled', true );	
+		$(".update").css('display','inline-block');
+		$(".delete").css('display','inline-block');
+		$(".fileUpl").css('display','block');
+	}else{
+		$(".prductPk").attr( 'readonly', false );	
+		$(".prduct").attr( 'disabled', false );	
+		$(".add").css('display','inline-block');
+		$(".fileUpl").css('display','inline-block');
+	}
+});	
+
+/* 멀티 파일업로드 로직 */
+// 이미지 정보들을 담을 배열
+var sel_files = [];
+
+$(document).ready(function() {
+    $("#prductImgFile1").on("change", handleImgFileSelect);
+    $("#prductImgFile2").on("change", handleImgFileSelect);
+    $("#prductImgFile3").on("change", handleImgFileSelect);
+    $("#prductImgFile4").on("change", handleImgFileSelect);
+}); 
+
+function fileUploadAction(i) {
+    console.log("fileUploadAction");
+    $("#prductImgFile"+i).trigger('click');
+}
+
+//미리보기
+function handleImgFileSelect(e) {
+	var imgId = $(this).attr("id");
+	 // 이미지 정보들을 초기화
+    sel_files = [];
+    $("."+imgId).empty();
+
+    var files = e.target.files;
+    var filesArr = Array.prototype.slice.call(files);
+    var index = 0;
+    
+    filesArr.forEach(function(f) {
+        if(!f.type.match("image.*")) {
+            alert("확장자는 이미지 확장자만 가능합니다.");
+            return;
+        }
+
+        sel_files.push(f);
+
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            var html = "";
+            html  = "<a href=\"javascript:void(0);\" onclick=\"deleteImageAction("+imgId+")\" id=\""+imgId+"\">";
+            html += "<img src=\"" + e.target.result + "\" data-file='"+f.name+"' class='selProductFile' title='Click to remove'></a>";
+            $("."+imgId).append(html);
+            index++;
+
+        }
+        reader.readAsDataURL(f);
+        
+    });
+}
+
+//개별 이미지 삭제
+function deleteImageAction(a) {
+    console.log("index : "+a);
+    console.log("sel length : "+sel_files.length);
+
+    //sel_files.splice(index, 1);
+
+    //var img_id = "#"+index;
+	//$(img_id).remove();
+	
+}
+
+//목록보기
+$(".btn_list").on('click', function(){
+	$("#mappingTy").val("");
+    $("#frm").attr("action", "/oper/prduct/selectPrductInfoList.do");
+	$("#frm").submit();
+});
+
+//취소하기
+$(".cencel").on('click', function(){
+	$("#mappingTy").val("DETAIL");
+	$("#frm").attr("action", "/oper/prduct/selectPrductInfoDet.do");
+	$("#frm").submit();
+});
+
+//수정하기
+$(".update").on('click', function(){
+	$("#mappingTy").val("UPDATE");
+	$(".prduct").attr( 'disabled', false );	
+	$(".update").css('display','none');
+	$(".delete").css('display','none');
+	$(".add").css('display','inline-block');
+	$(".cencel").css('display','inline-block');
+});
+
+//수정 취소하기
+$(".delete").on('click', function(){
+	if(!confirm("제품정보를 삭제 하시겠습니까?")) return;
+	
+	$("#mappingTy").val("");
+    $("#frm").attr("action", "/oper/prduct/deletePrductInfo.do");
+	$("#frm").submit();
+});
+
+
+//저장하기
+$(".add").on('click', function(){
+	if("" == $("#mappingTy").val()){
+		var prductCode = $("#prductCode").val();
+		var chkVal = formChk(prductCode);
+		if( 0 != chkVal){
+			alert("중복된 서비스 코드가 존재합니다.")
+			return;
+		}
+		
+		/* var data = new FormData();
+	    for(var i=0, len=sel_files.length; i<len; i++) {
+			var name = "prductImgId"+(i+1);
+		    $("#"+name).val(sel_files[i]);
+		}
+	    $("#prductImgCnt").val(sel_files.length);
+	     */
+	    $("#mappingTy").val("INSERT");
+	}
+	if(!confirm("저장 하시겠습니까?")) return;
+	$("#frm").attr("action", "/oper/prduct/selectPrductInfoDet.do");
+	$("#frm").submit(); 
+	
+});
+
+function formChk(prductCode){
+	var resdata;
+	var urlstr =  "/oper/prduct/selectPrductCodeChk.ajax";
+	$.ajax({
+		type     : "post",
+		data     : {prductCode : prductCode},
+		async    : false,
+		url      : urlstr,
+		success: function(data){
+			resdata = JSON.parse(data);
+		},
+		error : function(jqxhr, status, error) {
+			var msg = jqxhr.status + " , " + status + " , " + error;
+			alert(msg + "\n에러가 발생 했습니다. 관리자에게 문의 하세요");
+		}
+	});
+	return resdata.result;
+}
+
+
+
+</script>
+</html>
+

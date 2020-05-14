@@ -308,6 +308,17 @@ label input{margin-top:-3px;}
 .tab_s .tab_list a{border-width:0 0 2px 0;border-bottom-color:transparent;color:#999;}
 .tab_s .tab_list a:hover{background:none;font-family:'notokrR';color:#000;}
 .tab_s .tab_list .on a{border-bottom-color:#f14a4a;color:#000;}
+/* 추가 설치기사배정*/
+.tab_list1 {border-bottom:1px solid #d3d9e4;}
+.tab_list1 li{float:left;display:block;margin-bottom:-1px;}
+.tab_list1 a{display:block;color:#23527c;padding:5px 15px 7px;font-family:'notokrDL'; border-bottom-color:#fff;border:1px solid transparent;border-bottom-color:#d3d9e4;border-top-width:3px;margin-right:2px;border-radius:3px 3px 0 0;}
+.tab_list1 a:hover{background-color:#eef1f5;}
+.tab_list1 .on a{color:#0d0d0d;background-color:#fff;border-color:#d3d9e4;border-top-color:#f14a4a; border-bottom-color:transparent;z-index:5;font-family:'notokrR';}
+.tab_s{margin-bottom:10px;}
+.tab_s .tab_list1 a{border-width:0 0 2px 0;border-bottom-color:transparent;color:#999;}
+.tab_s .tab_list1 a:hover{background:none;font-family:'notokrR';color:#000;}
+.tab_s .tab_list1 .on a{border-bottom-color:#f14a4a;color:#000;}
+
 .tab_v{border:1px solid #e6ecf0;overflow:hidden;}
 .opt_area{float:left;height:100%;padding:10px; box-sizing:border-box;border-right:1px solid #e6ecf0;background-color:#f9fbfc;}
 .opt_area .tab_list_v{border:none;}

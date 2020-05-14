@@ -74,7 +74,7 @@
 }
 /* new_svc */
 .svc_item_wrap{display:flex;flex-wrap:wrap;align-items:flex-start;}
-.svc_item{flex:0 1 auto;width:19%;min-width:220px;margin:0 1% 1% 0;}
+.svc_item{flex:0 1 auto;width:19%;min-width:235px;margin:0 1% 1% 0;}
 .svc_item a{width:100%;height:100%;border:1px solid #d2d9e4;border-radius:10px;box-sizing:border-box;padding-bottom:10px;transition:border.5s;background:#fff;overflow:hidden;}
 .svc_item a:hover,
 .svc_item a:focus{border-color:#e4ded2;box-shadow:0 0 5px rgba(0,0,0,.3);}

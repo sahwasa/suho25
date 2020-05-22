@@ -54,7 +54,7 @@
 @keyframes gage{0%{width:0;}100%{width:calc(100% - 4px);}}
 .progress::after{left:0;top:0;width:100%;content:"다운로드중...";color:#fff;}
 .gisAside .audio_wrap{position:relative;width:100%;overflow:hidden;direction:ltl;border-radius:3px;}
-.gisAside .audio_wrap audio{width:250px;width:260px\0;padding:0;}
+.gisAside .audio_wrap audio{width:235px;width:260px\0;padding:0;}
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display{font-size:11px;}
 .gisAside li:hover audio::-webkit-media-controls-panel{background-color:#dcdee3;}

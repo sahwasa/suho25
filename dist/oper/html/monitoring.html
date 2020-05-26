@@ -238,6 +238,7 @@
 
   <button id="toast" type="button" class="btn btn_white" style="position:absolute;left:0;top:0; z-index:1000;">토스트</button>
   <button id="street" type="button" class="btn btn_white" style="position:absolute;left:100px;top:0; z-index:1000;">거리뷰 온오프</button>
+  <button id="street" type="button" class="btn btn_white btn_dis">거리</button>
 </div>
 <a href="#" class="btn_top" title="맨위로">맨위로</a>
 </body>
@@ -251,7 +252,7 @@ $(function(){
   var toast = new ax5.ui.toast();
   toast.setConfig({
     theme: "danger",
-    containerPosition: "top-left",
+    containerPosition: "top-right",
     icon: '<i class="axi axi-exclamation-triangle"></i>',
     "lang":{
         "ok":'<i class="axi_only axi_cirClose" title="닫기"></i>'

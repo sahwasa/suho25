@@ -4,7 +4,7 @@
 **/
 /* monitoring */
 .monitoring{position:relative;width:100%;height:100%;padding:0;}
-.ax5-ui-toast-container.top-left{left:50%;margin-left:-160px;}
+.ax5-ui-toast-container.top-right{margin-top:86px;}
 .ax5-ui-toast-container [data-ax-toast-btn="ok"]{padding:0;background-color:transparent!important;border:none!important;box-shadow: none!important;}
 .ax5-ui-toast-container .axi_cirClose::before{font-size:15px;color:#d9534f;}
 .gisAside{position:absolute;left:0;top:0;width:278px;height:100%;border-right:1px solid #b7b7b7;background-color:#fff;z-index:900;}
@@ -83,7 +83,10 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 [streetView="on"] .streetArea{height:40%;border-top: 1px solid #999;}
 [streetView="off"] .mapArea{height:100%;}
 [streetView="off"] .streetArea{height:0;}
-
+.btn_dis{position:absolute;right:182px;top:10px;z-index:1000;}
+@media screen and (max-width:668px){
+  .btn_dis{right:169px;}
+}
 .pop_areaDtl{position:absolute;width:310px;text-align:left;background-color:#fff;}
 .pop_areaDtl .pop_tit{position:relative;border-bottom: 1px solid #ccc;}
 .pop_areaDtl .pop_tit h1{display:block;color:#4a77dc;padding:15px 45px 15px 15px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}

@@ -192,14 +192,16 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .btn_list::before{content:"\e93c";font-size:16px;margin-right:5px;}
 
 /* toggle_radio,checkbox */
-.toggle label{position:relative;top:1px;display:block;width:40px;height:23px;font-size:0.813em!important;text-align:right;margin:0;cursor:pointer;box-sizing:border-box;
+.toggle label{position:relative;top:1px;display:block;width:55px;height:23px;font-size:0.813em!important;text-align:right;margin:0;cursor:pointer;box-sizing:border-box;
   color: #666;background-color:#dadee2;border-radius:15px;padding:0 8px 1px;}
 .toggle label[datavalue="on"]{background-color:#4a77dc;color:#fff;border-color:#4a77dc;text-align:left;}
 .toggle input[type="radio"],
 .toggle input[type="checkbox"]{position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;border:0 none;margin:0;opacity:.01;filter:alpha(opacity=0);
   cursor: pointer;}
 .toggle label::before{content:"";width:19px;height:19px;position:absolute;left:1px;top:2px;background-color:#fff;border-radius:50%;transition:all .3s;}
-.toggle label[datavalue="on"]::before{left:19px}
+.toggle label[datavalue="on"]::before{left:34px}
+.toggle label::after{position:relative;top:-7px;content:"No";font-size:12px;}
+.toggle label[datavalue="on"]::after{content:"Yes"}
 
 .deco input[type="radio"],
 .deco input[type="checkbox"]{width:20px!important;height:20px!important;-webkit-appearance:none;-moz-appearance:none; -o-appearance: none;appearance:none;outline:none;box-shadow:none;border:none;margin-right:10px;}
@@ -281,7 +283,6 @@ label input{margin-top:-3px;}
 .ui-jqdialog .ui-jqdialog-titlebar-close{margin-top:-9px;}
 .fm-button{padding:.2em .5em;}
 .DelButton.EditButton a{padding-left:1.9em;}
-.jq-grid .edit_cell > div{display:inline-block;margin-left:0!important;line-height:26px;vertical-align:middle;}
 .ui-pg-div{height:14px;}
 .ui-pg-div:hover{margin-top:-2px;}
 .ui-pg-div span{padding-top:2px;vertical-align:top;}
@@ -341,6 +342,7 @@ label input{margin-top:-3px;}
 .tbl_bot{text-align:center;margin-top:25px;}
 .tbl_scroll{height:680px;background-color:#f9fafc;overflow-y:scroll;}
 .tbl_idx .idx{width:80px;}
+.tbl_idx .edit_cell{width:50px}
 .fix_scroll{width:17px;}
 .tbl_scroll tr:first-child td{border-top-width:0;}
 .tbl_hover tr:hover td{background-color:#f3f5f9;cursor:pointer;}

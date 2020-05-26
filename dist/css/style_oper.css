@@ -78,7 +78,7 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 .gisAside .btn_statement.bg_gray{background-color:#797979;}
 .monitoring .gisArea{position:relative;height:100%;background:#ccc;overflow: hidden;}
 .monitoring .gisArea .mapArea,
-.monitoring .gisArea .streetArea{width:100%;transition:height .5s;box-sizing:border-box;}
+.monitoring .gisArea .streetArea{position:relative;width:100%;transition:height .5s;box-sizing:border-box;}
 [streetView="on"] .mapArea{height:60%;}
 [streetView="on"] .streetArea{height:40%;border-top: 1px solid #999;}
 [streetView="off"] .mapArea{height:100%;}
@@ -87,6 +87,12 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
 @media screen and (max-width:668px){
   .btn_dis{right:169px;}
 }
+.mapArea .car_info{position:absolute;left:50%;top:50%;background-color:#fff;border:1px solid #5d96f2;font-size:11px;padding:3px 8px;color:#000;box-shadow:2px 2px 2px rgba(0,0,0,.3);}
+.mapArea .car_info::after{content:"";display:block;position:absolute;left:50%;bottom:-5px;background-color:#fff;width:6px;height:7px;border:1px solid #5d96f2;transform:skewY(-50deg);border-width:0 0 1px 1px;margin-left:-4px;box-shadow:0px 4px 1px rgba(0,0,0,.2);}
+.mapArea .car_info b{color:#5d96f2;font-family:'notokrB';}
+.mapArea .standby::after,
+.mapArea .standby{border-color:#dd0000;}
+.mapArea .standby b{color:#ff0000;}
 .pop_areaDtl{position:absolute;width:310px;text-align:left;background-color:#fff;}
 .pop_areaDtl .pop_tit{position:relative;border-bottom: 1px solid #ccc;}
 .pop_areaDtl .pop_tit h1{display:block;color:#4a77dc;padding:15px 45px 15px 15px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}

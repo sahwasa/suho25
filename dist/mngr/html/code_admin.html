@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <title>수호25 관리자</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="../../img/favicon.png">
+    <link rel="stylesheet" href="../../plugins/axicon/axicon.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/pop.css" rel="stylesheet">
+    <link href="../../css/style_mngr.css" rel="stylesheet">
+    <link href="../../css/style_m.css" rel="stylesheet">
+    <script src="../../plugins/jquery/dist/jquery.min.js"></script>
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+  </head>
+  <body>
+<!-- 바로가기 메뉴 -->
+<div id="accessibility">
+  <a href="#content">본문 바로가기</a>
+  <a href="#nav">주메뉴 바로가기</a>
+</div>
+<hr class="access_divide" />
+<!-- 바로가기 메뉴__e -->
+<div class="wrap">
+  <div id="nav" class="aside">
+  <h1 class="tit_logo"><a href="" title="메인">SUHO25-TOP SAFETY</a></h1>
+  <div class="my_infoArea clearfix" myInfo>
+    <b>홍길동</b>
+    <span class="btn_wrap fr" myInfoLayer>
+      <button type="button" class="btn btn_s" myInfoIpt>내정보</button>
+      <button type="button" class="btn btn_s">로그아웃</button>
+    </span>
+    <div class="my_infoDtl">
+      <form>        
+        <ul class="my_info">
+          <li class="info_id">abcdefghight@gmail.com</li>
+          <li class="info_phone">010-1234-5678</li>
+          <li class="info_name"><input type="text" placeholder="이름" /></li>
+          <li class="info_pw"><input type="password" placeholder="비밀번호" /></li>
+          <li class="info_check"><input type="password" placeholder="비밀번호확인" /></li>
+        </ul>
+        <div class="btnArea">
+          <button type="button" class="btn btn_red">저장</button>
+          <button type="button" class="btn btn_gray" myIptClose>취소</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="util m_view">
+    <button class="btn_navToggle" toggle_nav><span class="ico">메뉴</span></button>
+  </div>
+  <ul class="gnb" role="navigation">
+    <li class="on"><a href="/mngr/html/code_admin.html">전체코드 관리</a></li>
+  </ul>
+  <div class="footer">
+    &copy; SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+  <div id="content" class="content">
+    <div class="content_tit">
+      <h1>전체코드 관리</h1>
+    </div>
+    <div class="content_body">
+      <div class="flex_wrap code_admin">        
+        <div class="ipt_wrap">
+          <div class="box_add box_gray">
+            <h2>상위코드 생성</h2>
+            <div class="box_cont">
+              <ul class="use_grid divide10 fullIpt">
+                <li class="w3">
+                  <input type="text" title="코드" placeholder="코드">
+                </li>
+                <li class="w3">
+                  <input type="text" title="코드명" placeholder="코드명">
+                </li>
+                <li class="w4">
+                  <input type="text" title="설명" placeholder="설명">
+                </li>
+              </ul>
+              <button type="button" class="btn btn_blue">추가</button>
+            </div>
+          </div>
+          <div class="box_code" tabindex="0">
+            <ul class="list_code">
+              <li class="on">
+                <span class="code">PRODUCT_COLOR</span>
+                <span class="c_nm">제품컬러</span>
+                <span class="c_ex">설명</span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </span>
+              </li>
+              <li class="edit">
+                <span class="code"><input type="text" title="코드" placeholder="코드"></span>
+                <span class="c_nm"><input type="text" title="코드명" placeholder="코드명"></span>
+                <span class="c_ex"><input type="text" title="설명" placeholder="설명"></span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_cirCheck" title="저장">저장</button>
+                  <button type="button" class="axi_only axi_cirClose" title="취소">취소</button>
+                </span>
+              </li>
+              <li>
+                <span class="code">ENVMQ</span>
+                <span class="c_nm">큐서버정보</span>
+                <span class="c_ex">설명</span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </span>
+              </li>                
+              <li>
+                <span class="code">PRODUCT_COLOR</span>
+                <span class="c_nm">제품컬러</span>
+                <span class="c_ex">설명</span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </span>
+              </li>
+              <li>
+                <span class="code">NTCN001</span>
+                <span class="c_nm">알림신고결과</span>
+                <span class="c_ex">설명</span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </span>
+              </li>
+              <li>
+                <span class="code">PRODUCT_COLOR</span>
+                <span class="c_nm">제품컬러</span>
+                <span class="c_ex">설명</span>
+                <span class="c_btn">
+                  <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                  <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row_rank_section">
+          <div class="tbl_top clearfix alignR">
+            <h3>PRODUCT_COLOR<span>제품컬러</span></h3>
+            <span class="flex_top">
+              <select name="" id="" title="구분" class="first">
+                <option value="">구분</option>
+                <option value="">코드</option>
+                <option value="">코드명</option>
+              </select>
+              <input type="text" placeholder="검색어" />
+              <button type="button" class="btn btn_blueline">검색</button>
+            </span>
+            <!-- <span class="clear_flex divideL">
+              <a href="" class="btn btn_blue">추가</a>
+            </span> -->
+            <div class="box_add box_gray">
+              <h2>하위코드 생성</h2>
+              <div class="box_cont">
+                <ul class="use_grid divide10 fullIpt">
+                  <li class="w3">
+                    <input type="text" title="하위코드" placeholder="하위코드">
+                  </li>
+                  <li class="w3">
+                    <input type="text" title="하위코드명" placeholder="하위코드명">
+                  </li>
+                  <li class="w4">
+                    <input type="text" title="설명" placeholder="설명">
+                  </li>
+                </ul>
+                <button type="button" class="btn btn_blue">추가</button>
+              </div>
+            </div>
+          </div>
+          <div class="tbl_wrap">
+            <table class="tbl_default tbl_idx">
+              <colgroup>
+                <col class="idx" />
+                <col span="5"/>
+                <col class="edit_cell"/>
+                <col class="fix_scroll" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th id="th01">No.</th>
+                  <th id="th02">코드</th>
+                  <th id="th03">코드명</th>
+                  <th id="th04">설명</th>
+                  <th id="th05">수정일</th>
+                  <th id="th06">상태</th>
+                  <th id="th07">수정</th>
+                  <th class="fix_scroll"></th>
+                </tr>
+              </thead>
+            </table>
+            <div class="tbl_scroll">
+              <table class="tbl_default tbl_hover tbl_idx fullIpt">
+                <colgroup>
+                  <col class="idx" />
+                  <col span="5"/>
+                  <col class="edit_cell"/>
+                </colgroup>
+                <tbody>
+                  <tr class="edit">
+                    <td headers="th01">0</td>
+                    <td headers="th02"><label for="">코드</label> <input type="text"></td>
+                    <td headers="th03"><label for="">코드명</label> <input type="text"></td>
+                    <td headers="th04" class="alignL"><label for="">설명</label> <input type="text"></td>
+                    <td headers="th05"><label for="">수정일</label> <input type="date"></td>
+                    <td headers="th06"><label for="">상태</label><select name="" id="" title="상태"><option value="">완료</option></select></td>
+                    <td headers="th07" class="no_sum">
+                      <button type="button" class="axi_only axi_cirCheck" title="저장">저장</button>
+                      <button type="button" class="axi_only axi_cirClose" title="취소">취소</button>
+                    </td>
+                  </tr>
+                  <tr class="on" onclick="location.href='assign_dtl.html'" 
+                  onKeypress="javascript:if(event.keyCode==13) {location.href='assign_dtl.html'}">
+                    <td headers="th01">1</td>
+                    <td headers="th02"><label for="">코드</label> IP</td>
+                    <td headers="th03"><label for="">코드명</label> 122.199.200.230</td>
+                    <td headers="th04" class="alignL"><label for="">설명</label> HOST_IP</td>
+                    <td headers="th05"><label for="">수정일</label> 2020-03-01 12:34:56</td>
+                    <td headers="th06"><label for="">상태</label><i class="axib axi_cirCheck t_skyblue"> 완료</i></td>
+                    <td headers="th07" class="no_sum">
+                      <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                      <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td headers="th01">2</td>
+                    <td headers="th02"><label for="">코드</label> IP_PORT</td>
+                    <td headers="th03"><label for="">코드명</label> 5672</td>
+                    <td headers="th04" class="alignL"><label for="">설명</label> HOST_PORT</td>
+                    <td headers="th05"><label for="">수정일</label> 2020-03-01 12:34:56</td>
+                    <td headers="th06"><label for="">상태</label> <i class="axib axi_cirCheck t_skyblue">완료</i></td>
+                    <td headers="th07" class="no_sum">
+                      <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                      <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td headers="th01">3</td>
+                    <td headers="th02"><label for="">코드</label> USER_ID</td>
+                    <td headers="th03"><label for="">코드명</label> admin</td>
+                    <td headers="th04" class="alignL"><label for="">설명</label> 사용자ID</td>
+                    <td headers="th05"><label for="">수정일</label> 2020-03-01 12:34:56</td>
+                    <td headers="th06"><label for="">상태</label> <i class="axib axi_cirCheck t_skyblue">완료</i></td>
+                    <td headers="th07" class="no_sum">
+                      <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                      <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td headers="th01">4</td>
+                    <td headers="th02"><label for="">코드</label> USER_PW</td>
+                    <td headers="th03"><label for="">코드명</label> 1234</td>
+                    <td headers="th04" class="alignL"><label for="">설명</label> 사용자PW</td>
+                    <td headers="th05"><label for="">수정일</label> 2020-03-01 12:34:56</td>
+                    <td headers="th06"><label for="">상태</label> <i class="axib axi_cirCheck t_skyblue">완료</i></td>
+                    <td headers="th07" class="no_sum">
+                      <button type="button" class="axi_only axi_edit" title="수정">수정</button>
+                      <button type="button" class="axi_only axi_del" title="삭제">삭제</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="m_footer m_view">
+    &copy; SUHO25 Corp. All Rights Reserved.
+  </div>
+</div>
+
+<a href="#" class="btn_top" title="맨위로">맨위로</a>
+</body>
+<script src="../../js/ui_common.js"></script>
+
+</html>

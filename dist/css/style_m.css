@@ -129,7 +129,7 @@
   .tbl_top .clear_flex .btn,
   .tbl_top .flex_top *{min-width:60px;}
   .tbl_idx td:first-child{width:35px;}
-  .tbl_default tbody .no_sum{width:60px;}
+  .tbl_default tbody .no_sum{width:40px;}
 
   /* aside */
   

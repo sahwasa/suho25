@@ -3,6 +3,12 @@
 
 **/
 @media screen and (max-width:1280px){
+  body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
+  .btn_list::before, .axi_only::before, .axib::before{font-size:14px;}
+  .gnb > li > a{line-height:45px;}
+  .axi_newOpen{position:relative;top:1px;line-height:0;}
+  .use_grid, .defalut_iptList{margin: -10px -5px 0;}
+  .defalut_iptList li, .use_grid > li {padding: 10px 5px 0;}
   .tbl_idx .idx{width:50px;}
 }
 @media screen and (max-width:1023px){
@@ -15,6 +21,7 @@
   .ipt_wrap .ipt_info{width:270px;margin-left:30px;}
 
   /* table */
+
   .tbl_top .flex_top{display:flex;width:100%;flex-direction:row;justify-content:space-between;}
   .tbl_top .clear_flex *,
   .tbl_top .flex_top *{min-width:70px;margin-left:3px;}
@@ -121,15 +128,16 @@
   .tab{margin-bottom:10px;}
   .tab_btns .btn{padding:1px 8px 2px;}
   .tabCont_btns{margin-bottom:5px;}
-  .tab_v .tab_conts .tab_cont{padding:10px;}
-  
+  .tab_v .tab_conts .tab_cont{padding:10px;} 
   legend{margin-bottom:10px;}
 
   /* table */
+  .tbl_top .flex_wrap .ipt_items input{width:calc(100% - 44px);}
+  .tbl_top .flex_wrap .ipt_items .btn{min-width:44px;}
   .tbl_top .clear_flex .btn,
   .tbl_top .flex_top *{min-width:60px;}
   .tbl_idx td:first-child{width:35px;}
-  .tbl_default tbody .no_sum{width:60px;}
+  .tbl_default tbody .no_sum{width:40px;}
 
   /* aside */
   
@@ -165,9 +173,10 @@
   textarea{-webkit-appearance:none;border-radius:0;}
   input[type="radio"]{-webkit-appearance:radio;}
   .color_list input[type="radio"]{-webkit-appearance:none;}
-  select{padding:1px 5px 2px;}
+  select{padding:2px 5px 2px;}
   .tbl_scroll{height:auto;}
   .fix_scroll{width:0;}
   .box_gray{background-color:#f0f3f5;border-color:#e4e7e9;}
   .m_footer{background-color:#e2e2e2;}
+  .btn{padding-top:3px;}
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
   <head>
-    <title>수호25 관리자</title>
+    <title>수호25 운영자</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="../../img/favicon.png">
@@ -10,10 +10,12 @@
     <link rel="stylesheet" type="text/css" href="../../plugins/ax5ui-toast/dist/ax5toast.css" />
     <link href="../../css/common.css" rel="stylesheet">
     <link href="../../css/pop.css" rel="stylesheet">
-    <link href="../../css/style_mngr.css" rel="stylesheet">
+    <link href="../../css/style_oper.css" rel="stylesheet">
     <link href="../../css/style_m.css" rel="stylesheet">
     <script src="../../plugins/jquery/dist/jquery.min.js"></script>
     <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5core/dist/ax5core.min.js"></script>
+    <script type="text/javascript" src="../../plugins/ax5ui-toast/dist/ax5toast.min.js"></script>
   </head>
   <body>
 <!-- 바로가기 메뉴 -->
@@ -52,7 +54,27 @@
     <button class="btn_navToggle" toggle_nav><span class="ico">메뉴</span></button>
   </div>
   <ul class="gnb" role="navigation">
-    <li class="on"><a href="/mngr/html/code_admin.html">전체코드 관리</a></li>
+    <li><a href="/oper/html/monitoring.html" title="새창열림" target="_blank">모니터링 <i class="axi_only axi_newOpen">새창열림</i></a></li>
+    <li class="on"><a href="/oper/html/svc_info.html">서비스정보</a>
+      <ul class="sub">
+        <li class="on"><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/product_list.html">제품정보</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/svc_status.html">서비스 이용현황</a>
+      <ul class="sub">
+        <li><a href="">서브1</a></li>
+        <li><a href="">서브2</a></li>
+      </ul>
+    </li>
+    <li><a href="/oper/html/assign.html">설치기사배정</a></li>
+    <li><a href="/oper/html/assign.html">제품설치대기</a></li>
   </ul>
   <div class="footer">
     &copy; SUHO25 Corp. All Rights Reserved.

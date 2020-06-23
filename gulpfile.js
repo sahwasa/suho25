@@ -37,7 +37,7 @@ function watch(){
   gulp.watch('dev/**/*.html', inc);
   gulp.watch(['dev/**/*.jpg','dev/**/*.png','dev/**/*.gif'], imgMin);
   gulp.watch('dev/**/*.js', js);
-  gulp.watch('dev/**/css/**/*.css', css);
+  gulp.watch('dev/**/*.css', css);
 }
 
 exports.inc = inc;

@@ -14,14 +14,13 @@
 @media screen and (max-width:1023px){
   /* 태블릿, 아이패드프로 제외 */
   .wrap{height:auto\0;}
-  .m_view{display:block;}
+  .m_view{display:block;}  
 
   /* box */
   .ipt_wrap .section{width:calc(100% - 300px);}
   .ipt_wrap .ipt_info{width:270px;margin-left:30px;}
 
   /* table */
-
   .tbl_top .flex_top{display:flex;width:100%;flex-direction:row;justify-content:space-between;}
   .tbl_top .clear_flex *,
   .tbl_top .flex_top *{min-width:70px;margin-left:3px;}
@@ -79,7 +78,7 @@
   .full_lnb .gnb::before{content:"";position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(2,32,74,.9);}
   .full_lnb .gnb{display:block;position:fixed;width:100%;height:100%;left:0;top:0;padding:50px 0;margin:0;overflow-y:scroll;}
   .full_lnb .gnb > li{position:relative;z-index:900;}
-  .full_lnb .gnb > li > a{font-size:23px;color:#fff;letter-spacing:-1px;}
+  .full_lnb .gnb > li > a{font-size:14px;color:#fff;letter-spacing:-1px;}
   .full_lnb .axi_newOpen::before{font-size:16px;}
   .full_lnb .sub li{float:none;width:100%;}
   .full_lnb .sub a{width:100%;font-size:16px;padding:15px 0;}
@@ -100,8 +99,7 @@
   .use_grid > li{padding:10px 5px 0;}  
 }
 @media screen and (max-width:668px){
-  /* 모바일 */
-  body,h1,h2,h3,h4,h5,h6,th,td,input,select,textarea,ul,li,dl,dt,dd,button,p,a,.btn{font-size:0.938em;}
+  /* 모바일 */  
 
   .p_view{display:none!important;}
   

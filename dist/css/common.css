@@ -202,7 +202,9 @@ input, textarea {border:1px solid #d2d9e4;color:#333;background-color:rgba(255,2
 .toggle label::before{content:"";width:19px;height:19px;position:absolute;left:1px;top:2px;background-color:#fff;border-radius:50%;transition:all .3s;}
 .toggle label[datavalue="on"]::before{left:34px}
 .toggle label::after{position:relative;top:-7px;content:"NO";font-size:12px;}
-.toggle label[datavalue="on"]::after{content:"Yes"}	.toggle label[datavalue="on"]::after{content:"YES"}
+
+.toggle label[datavalue="on"]::after{content:"YES"}
+
 
 .deco input[type="radio"],
 .deco input[type="checkbox"]{width:20px!important;height:20px!important;-webkit-appearance:none;-moz-appearance:none; -o-appearance: none;appearance:none;outline:none;box-shadow:none;border:none;margin-right:10px;}

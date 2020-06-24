@@ -10,6 +10,7 @@
   <link href="/css/common.css" rel="stylesheet">
   <link href="/css/style_m.css" rel="stylesheet">
   <link href="/css/style_main.css" rel="stylesheet">
+  <link href="/css/pop.css" rel="stylesheet">
   <script src="/plugins/jquery/dist/jquery.min.js"></script>
   <script src="/plugins/jquery-touchswipe/jquery.touchSwipe.min.js"></script>
 </head>
@@ -33,19 +34,44 @@
       </div>
     </div>
     <div class="cmmn_footer">
-  <ul class="footer_list">
-    <li><a href="#">이용약관</a></li>
-    <li><a href="#">개인정보처리방침</a></li>
-  </ul>
-  <p class="addr">
-    서울특별시 금천구 디지털로 9길 68, 대륭포스트타워 5차 1901-4호
-    <span class="divideL">사업자번호 : 12</span>
-  </p>
-  <div class="copy">
-    Copyright &copy;2020 <span class="t_mint">SUHO25</span> Co.,Ltd. All right reserved.
+      <ul class="footer_list">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+      </ul>
+      <p class="addr">
+        서울특별시 금천구 디지털로 9길 68, 대륭포스트타워 5차 1901-4호
+        <span class="divideL">사업자번호 : 12</span>
+      </p>
+      <div class="copy">
+        Copyright &copy;2020 <span class="t_mint">SUHO25</span> Co.,Ltd. All right reserved.
+      </div>
+    </div>
   </div>
 </div>
+<!-- Id_Pw찾기_팝업 -->
+  <div class="pop_findIdPW pop_wrap layer_pop" style="display: block;">
+    <div class="pop_tit">
+      <h1>아이디 찾기</h1>
+      <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
+    </div>
+    <div class="pop_body">
+      <p class="intro">가입시 등록한 번호로 검색해주세요.</p>
+      <div class="box_grayLine flex_wrap">        
+        <input type="text" placeholder="휴대폰 번호" title="휴대폰번호" />
+        <button type="button" class="btn btn_blue">검색</button>
+      </div>
+      <div class="result_wrap">
+        <h2>검색결과</h2>
+        <div class="box_gray">
+          <p>찾으시는 아이디는 <b class="t_red">aaaa</b>입니다.</p>
+        </div>
+      </div>
+      <div class="btn_area">
+        <button class="btn btn_whiteline" role="btn_close">취소</button>
+        <button class="btn btn_red">아이디입력</button>
+      </div>
+    </div>
   </div>
-</div>
+<!-- Id_Pw찾기_팝업__e -->
 </body>
 </html>

@@ -21,7 +21,6 @@
   .ipt_wrap .ipt_info{width:270px;margin-left:30px;}
 
   /* table */
- 
   .tbl_top .flex_top{display:flex;width:100%;flex-direction:row;justify-content:space-between;}
   .tbl_top .clear_flex *,
   .tbl_top .flex_top *{min-width:70px;margin-left:3px;}
@@ -127,8 +126,7 @@
   .tab{margin-bottom:10px;}
   .tab_btns .btn{padding:1px 8px 2px;}
   .tabCont_btns{margin-bottom:5px;}
-  .tab_v .tab_conts .tab_cont{padding:10px;}
-  
+  .tab_v .tab_conts .tab_cont{padding:10px;} 
   legend{margin-bottom:10px;}
 
   /* table */
@@ -178,5 +176,5 @@
   .fix_scroll{width:0;}
   .box_gray{background-color:#f0f3f5;border-color:#e4e7e9;}
   .m_footer{background-color:#e2e2e2;}
-  .btn{paddint-top:3px;}
+  .btn{padding-top:3px;}
 }

@@ -198,7 +198,7 @@
     <!-- 지역팝업 -->
     <!-- 드래그기능 빼달라하셔서 뺐어요, 넣으실거면 아래 결과입력팝업처럼
      .pop_wrap ( dataformat='modal') 속성 추가해주세요  -->
-    <div class="pop_areaDtl pop_wrap">
+    <div class="pop_areaDtl pop_wrap" style="left:20%;top:10%;">
       <div class="pop_tit">
         <h1>길동 천국 1호점길동 천국 1호점길동 천국 1호점길동 천국 1호점</h1>
         <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
@@ -243,6 +243,67 @@
       </div>
     </div>
     <!-- 결과입력팝업__e -->
+
+    <!-- 출동차량팝업 -->    
+    <div class="pop_wrap layer_pop pop_areaDtl pop_callingDtl" dataformat="modal" style="display: block;">
+      <div class="pop_tit pop_header">
+        <h1>김밥천국</h1>
+        <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
+      </div>
+      <div class="body">        
+        <div class="area_info">
+          <p class="address">제주특별자치도 제주시 조천읍 비자림로 685-1</p>
+          <span class="name">홍길동</span><b class="phone">010-1234-5678</b>
+        </div>
+        <div class="section calling">
+          <h2 class="blind">출동차량 현황</h2>
+          <div class="box_gray">
+            <dl class="calling_list">
+              <dt>111나1111(1호차)</dt>
+              <dd>
+                <span>홍길동</span>
+                <b class="wait">대기</b>
+                <span>1시간 10분 소요</span>
+                <button type="button" class="btn btn_red">출동</button>
+              </dd>
+              <dt>111나1111(1호차)</dt>
+              <dd>
+                <span>홍길동</span>
+                <b class="wait">대기</b>
+                <span>1시간 10분 소요</span>
+                <button type="button" class="btn btn_gray">출동</button>
+              </dd>
+              <dt>111나1111(1호차)</dt>
+              <dd>
+                <span>홍길동</span>
+                <b class="act">출동</b>
+                <span>1시간 10분 소요</span>
+                <button type="button" class="btn btn_red">출동</button>
+              </dd>
+            </dl>          
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 출동차량팝업__e -->
+
+    <!-- 프롬프트팝업 -->    
+    <div class="pop_wrap layer_pop pop_alert" style="display: block;">
+      <div class="pop_tit">
+        <h1>제목</h1>
+        <button type="button" class="axi_only axi_del" role="btn_close" title="닫기">닫기</button>
+      </div>
+      <div class="pop_body">
+        <p>
+          내용이 있습니다.내용이 있습니다.내용이 있습니다.내용이 있습니다.내용이 있습니다.내용이 있습니다.내용이 있습니다.내용이 있습니다.
+        </p>
+        <div class="pop_footer">
+           <button class="btn btn_whiteline" role="btn_close">취소</button>
+          <button class="btn btn_blue">확인</button>
+        </div>
+      </div>
+    </div>
+    <!-- 프롬프트팝업__e -->
 
   <button id="toast" type="button" class="btn btn_white" style="position:absolute;left:0;top:0; z-index:1000;">토스트</button>
   <button id="street" type="button" class="btn btn_white" style="position:absolute;left:100px;top:0; z-index:1000;">거리뷰 온오프</button>

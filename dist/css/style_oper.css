@@ -388,3 +388,5 @@ audio::-webkit-media-controls-time-remaining-display{margin:0;padding:0;}
   .code_admin .row_rank_section{width:100%;margin:20px 0 0;padding:10px;}
 }
 
+/* 검색결과 처리용 */
+#resShop li:hover{ background-color:rgb(217, 225, 239); }
